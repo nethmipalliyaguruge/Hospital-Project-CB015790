@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulting Reservation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="home.html" class="logo-link">
+            <img class="logo" src="Images/Wellspring Hospital (1).png" alt="Picture of the logo">
+        </a>
+        <div class="header-content">
+            <div class="emergency-call">
+                <big>Emergency call <a href="tel:1313">1313</a></big>
+            </div>
+            <nav class="navigation">
+                <a href="home.html" target="_blank">Home</a>
+                <a href="about us .html" target="_blank">About Us</a>
+                <a href="services.html" target="_blank">Services</a>
+                <a href="doctors.html" target="_blank">Our Doctors</a>
+                <a href="consulting reservation.html" target="_blank">Consulting Reservation</a>
+                <a href="pharmacy.html" target="_blank">Pharmacy</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1>Consulting Reservation</h1>
+        <form action="#">
+            <fieldset>
+                <label for="name1">Name : </label>
+                <input type="text" name="name1" id="name1" placeholder="Full Name" required><br><br>
+
+                <label for="email1">Email : </label>
+                <input type="email" name="email1" id="email1" placeholder="@gmail.com" required><br><br>
+
+                <label for="contact">Conatct Number : </label>
+                <input type="text" maxlength="10" name="contact" id="contact" placeholder="+94 xx xxxx xxx" required><br><br>
+
+                <label for="patientno">Patient No : </label>
+                <input type="number" name="patientno" id="patientno"><br><br>
+
+                <label for="doctors">Select the Doctor : </label>
+                <select>
+                    <option value="">--Select--</option>
+                    <option value="doc1">Dr.Alex Middleton</option>
+                    <option value="doc2">Dr.Taylor Windsor</option>
+                    <option value="doc3">Dr.Jordan Rivers</option>
+                    <option value="doc4">Dr.Casey Montgomery</option>
+                </select><br><br>
+
+                <label for="date1">Preferred Date : </label>
+                <input type="date" name="date1" id="date1">
+            </fieldset>
+            <br>
+
+                <input type="submit" name="submit1" id="submit1">
+                <input type="reset" name="reset1" id="reset1">
+        </form>
+
+    </main>
+    <footer>
+        <div class="footer">
+            <img class="f_logo" src="Images/Logo.png" alt="picture of the logo">
+            <div class="contact-section">
+                <span>Contact Us</span>
+                Address: 114 Norris Canal Rd, Colombo 01000<br>
+                Phone: <a href="tel:+94 11 2140 000">+94 11 2140 000</a><br>
+                Email: wellspringhealthcare@gmail.com
+            </div>
+            <div class="branches-section">
+                <span>Our Branches</span>
+                Colombo: <a href="tel:+94 11 2140 000">+94 11 2140 000</a><br>
+                Kandy: <a href="tel:+94 81 452 8800">+94 81 452 8800</a><br>
+                Galle: <a href="tel:+94 91 464 0640">+94 91 464 0640</a><br>
+            </div>
+        </div>
+        <p>&copy; 2024 Wellspring Hospital. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>
