@@ -21,6 +21,7 @@ header {
     padding: 1px 20px;
     background-color: var(--HF-color);
     height: auto;
+    
 }
 
 .logo-link {
@@ -107,6 +108,23 @@ video{
     justify-content: center;
 }
 
+.intro {
+    text-align: center;
+    color:var(--text-color);
+    font-size:larger;
+    bottom:auto;
+    margin-bottom: 3%;
+}
+
+h1{
+    color: #2e838b;
+}
+
+h2{
+    text-indent: 5%;
+    color: var(--text-color);
+}
+
 
 /* Home page */
 .hero{
@@ -130,15 +148,6 @@ video{
     margin-top: 2%;
 }
 
-.intro {
-    text-align: center;
-    color:var(--text-color);
-    font-size:larger;
-    bottom:auto;
-    margin-bottom: 3%;
-
-}
-
 .video-container{
     display: flex;
     justify-content: center;
@@ -159,11 +168,13 @@ video{
 .box{
     flex-direction: column;
     background-color: #e1e5e6b1;
-    border-style:outset;
     border-width: 5px;
     height: fit-content;
     line-height: 2;
     color: var(--text-color);
+    box-shadow: 0 0 20px #3f3f3f;
+    padding: 25px;
+    margin: 30px;
 }
 
 
@@ -174,73 +185,131 @@ video{
     justify-content:space-around;
     align-items: center;
     column-gap: 5%;
-    margin: 5%; 
+    margin: 5%;
+    padding-right: 25px; 
     color: var(--text-color);
     background-color:rgb(247, 246, 245);
+    box-shadow: 0 0 20px #3f3f3f;
     /* transform: ; */
 }
 
-
-h2{
-    text-indent: 5%;
-    color: var(--text-color);
+.table-content{
+    border-collapse: collapse;
+    margin: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 1rem;
+    box-shadow: 0 0 20px #3f3f3f;
 }
+
+.table-content thead th{
+    background-color: #3f3f3f;
+    color: white;
+    font-weight: bold;
+}
+
+.table-content tbody tr{
+    border-bottom: #3f3f3f solid 1px;
+}
+
+.table-content th, .table-content td{
+    padding: 25px 25px;
+    text-align: left;
+}
+
+.table-content tbody tr:nth-child(even){
+    background-color: #ccc;
+}
+
+.table-content tbody tr:last-of-type{
+    border-bottom: #3f3f3f 2px solid;
+}
+
+
 /* Doctors */
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create 2 equal columns */
+    gap: 30PX; /* Space between items */
+    margin: 10%; /* Outer margin */
+    background-color: var(--HF-color);
+}
+
+.container-box {
+    height: 500px;
+    width: auto /* Auto width based on grid */
+    box-shadow: 0 0 20px #3f3f3f;
+    padding: 20px; /* Inner padding */
+    background-color: lightblue;
+}
+
 
 /* Service */
-.containerF{
+.container-flex{
     display: flex;
     flex-direction: row;
-    row-gap: 20px;
-    background-color:white;
-    height: auto;
-    width: auto;
-    column-gap: 5%;
+    column-gap: 35px;
     justify-content: space-around;
-    align-items: center;
     flex-wrap: wrap;
+    margin: 10px;
+    
 }
 
-.boxF{
-    width: 450px;
-    height: auto;
-    border: #5d5d5d;
-    align-items: center;
-    justify-content: center;
-    background-color: #0c4843;
+.box-flex{
+    box-shadow: 0 0 25px #3f3f3f;
+   
 }
 
-.Sname{
-    background-color: #22cadd;
+.service-name{
+    text-align: center;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: large;
+}
+
+#patient-reg{
+    margin: 35px;
     text-align: center;
 }
 
-.Simg{
-    justify-content: center;
+#patient-reg button{
+    background-color: #628cba;
+    padding: 15px;
+    border: none;
+
 }
 
-/* Patient Registration*/
+#patient-reg a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+}
+
+/* Forms*/
 .registration-form{
     background:url("./Images/Home3.jpg") no-repeat center;
     background-size: cover;
     margin: 5%;
-    
-    
 }
 
 .form-box{
     background-color: white;
     position:relative;
     margin: 10%;
-    padding: 5px;
+    padding: 25px;
     opacity: 90%;
-    
-
 }
 
 .form-box h1{
-    text-align: center;
-    
+    text-align: center; 
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.form-box label{
+    font-size: 20px;    
+   
 }
 
 
