@@ -9,26 +9,6 @@ body{
     margin: 0px;
 }
 
-/* header{
-    display: flex;
-    align-items: center;
-    justify-content:space-between;
-    background-color: var(--HF-color);
-}
-
-.logo{
-    height: auto;
-    width: 200px;
-    
-}
-
-
-header a{
-    text-decoration: none;
-    color:rgb(2, 31, 90);
-    margin: 1.5rem;
-    font-size:larger;
-    font-weight: bold;
     /*for navigation bar position: sticky; */
     
 
@@ -242,27 +222,7 @@ video{
 
 
 
-/* footer{
-    background-color: var(--HF-color);
-}
 
-.f_logo{
-    width: auto;
-    height: 150px;
-}
-
-.footer{
-    height: 134px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-decoration: none;
-}
-
-footer p{
-    background-color: rgb(255, 255, 255);
-    text-align: center;
-} */
 
 
 /* Footer Styling */
