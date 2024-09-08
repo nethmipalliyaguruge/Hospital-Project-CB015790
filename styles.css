@@ -1,7 +1,7 @@
 :root{
     --HF-color:#cfd2d3ad;
     /* --HF-color:#22cadd; */
-    --text-color:#5d5d5d;
+    --text-color:#575656;
 }
 
 body{
@@ -22,12 +22,6 @@ header {
     background-color: var(--HF-color);
     height: auto;
     
-}
-
-.logo-link {
-    flex: 1;
-    display: flex;
-    align-items: center;
 }
 
 .logo {
@@ -70,11 +64,13 @@ header {
 .navigation a {
     color: #333;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .navigation a:hover {
     text-decoration: underline;
+    font-size: 20px;
+    color: #2e838b;
 }
 
 /* Responsive Design */
@@ -96,6 +92,8 @@ header {
     }
 
     .navigation {
+        display: flex;
+        flex-direction: column;
         position: static;
         width: 100%;
         justify-content: center;
@@ -135,6 +133,14 @@ h2{
     height: 75vh;
 }
 
+.hero:hover{
+    background-image: url("Images/Home4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 75vh;
+}
+
 #overlayer{
     text-align: center;
     justify-items: center;
@@ -143,7 +149,8 @@ h2{
     height: 75vh;
     text-indent:2cm;
     font-size: 4rem;
-    color:#0e0d3c;
+    color:#1d575c;
+    background-color: #e1e5e638 ;
     text-decoration:solid;
     margin-top: 2%;
 }
@@ -201,6 +208,12 @@ h2{
     margin: 30px;
 }
 
+.home img:hover{
+    transform: scale(1.05);
+    transition: transform 0.5s;
+    
+}
+
 
 /* About Us */
 .brunch{
@@ -253,19 +266,69 @@ h2{
 /* Doctors */
 .container-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Create 2 equal columns */
-    gap: 30PX; /* Space between items */
-    margin: 10%; /* Outer margin */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid with flexible columns */
+    gap: 30px; /* Space between items */
+    margin: 0 auto; /* Center grid and remove the 10% margin */
+    margin-bottom: 20px;
+    padding: 0 5%; /* Add padding to both sides */
     background-color: var(--HF-color);
+    justify-content: center;
+}
+
+.container-box {
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    text-align: center; /* Center the content */
+    transition: transform 0.3s ease-in-out; /* Smooth hover animation */
+}
+
+.container-box img {
+    max-width: 100%; /* Make the image responsive */
+    /* border-radius: 50%; Make the image circular */
+    margin-bottom: 15px; /* Space below the image */
+}
+
+.container-box h3 {
+    margin: 10px 0; /* Space around the heading */
+    color: #333;
+}
+
+.container-box p {
+    font-size: 16px; /* Adjust font size for better readability */
+    line-height: 2;
+    color:var(--text-color);
+}
+
+.container-box:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+@media (max-width: 768px) {
+    .container-grid {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    }
+}
+
+
+/* .container-grid {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    gap: 30PX; 
+    margin: 10%; 
+    background-color: var(--HF-color);
+    justify-content: space-between;
 }
 
 .container-box {
     height: 500px;
-    width: auto /* Auto width based on grid */
-    box-shadow: 0 0 20px #3f3f3f;
-    padding: 20px; /* Inner padding */
-    background-color: lightblue;
-}
+    width: auto; 
+    background-color : lightblue;
+    padding: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+} */
 
 
 /* Service */
@@ -282,6 +345,7 @@ h2{
 .box-flex{
     box-shadow: 0 0 25px #3f3f3f;
     margin: 30px;
+    border-radius: 5px;
    
 }
 
@@ -359,7 +423,8 @@ h2{
 }
 
 #submit1{
-    background-color: #2e838b;
+    /* background-color: #2e838b; */
+    background-color:#3481887e;
     padding: 15px;
     border: none;
     width: 100%;
