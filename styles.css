@@ -148,6 +148,12 @@ h2{
     margin-top: 2%;
 }
 
+#welcome-msg{
+    margin-top: 50px;
+    box-shadow: 0 0 20px #3f3f3f;
+    padding: 2%;
+}
+
 .video-container{
     display: flex;
     justify-content: center;
@@ -163,6 +169,24 @@ h2{
     align-items: center;
     justify-content: space-evenly;
     
+}
+
+#home-about{
+    box-shadow: 0 0 20px #3f3f3f;
+    /* margin: 10px; */
+    margin-top: 50px;
+    padding: 25px;
+}
+
+#home-about a, .box a{
+    text-decoration: none;
+    color: #2e838b;
+    font-weight: bold;
+    font-size: large;
+}
+
+#home-about a, .box a:hover{
+    color: #3f3f3f;
 }
 
 .box{
@@ -257,6 +281,7 @@ h2{
 
 .box-flex{
     box-shadow: 0 0 25px #3f3f3f;
+    margin: 30px;
    
 }
 
@@ -304,14 +329,60 @@ h2{
 .form-box h1{
     text-align: center; 
     text-transform: uppercase;
-    font-size: 30px;
-}
+    font-size: 30px;}
 
 .form-box label{
-    font-size: 20px;    
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;   
    
 }
 
+.form-box input{
+    width: 100%;
+    padding: 10px 2px;
+    margin: 10px 0;
+}
+
+.form-box select{
+    width: 100%;
+    padding: 10px 2px;
+    margin: 10px 0;
+}
+
+.form-box input[type="radio"]{
+    margin: 10px 0;
+    gap: 10px;
+
+}
+
+#submit1{
+    background-color: #2e838b;
+    padding: 15px;
+    border: none;
+    width: 100%;
+    font-weight: bold;
+}
+
+#submit1:hover{
+    background-color: #3f3f3f;
+    color: white;
+}
+
+#reset1{
+    background-color: #f3eceb;
+    padding: 15px;
+    border: solid 0.1mm #3f3f3f;
+    width: 100%;
+    font-weight: bold;
+}
+
+#reset1:hover{
+    background-color: #3f3f3f;
+    color: white;
+}
 
 
 /* Footer Styling */
