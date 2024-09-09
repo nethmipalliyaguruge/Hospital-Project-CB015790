@@ -1,7 +1,7 @@
 :root{
     --HF-color:#cfd2d3ad;
-    /* --HF-color:#22cadd; */
     --text-color:#575656;
+    --box-shadow: 0 0 20px #3f3f3f;
 }
 
 body{
@@ -157,7 +157,7 @@ h2{
 
 #welcome-msg{
     margin-top: 50px;
-    box-shadow: 0 0 20px #3f3f3f;
+    box-shadow: var(--box-shadow);
     padding: 2%;
 }
 
@@ -179,7 +179,7 @@ h2{
 }
 
 #home-about{
-    box-shadow: 0 0 20px #3f3f3f;
+    box-shadow:var(--box-shadow);
     /* margin: 10px; */
     margin-top: 50px;
     padding: 25px;
@@ -192,7 +192,7 @@ h2{
     font-size: large;
 }
 
-#home-about a, .box a:hover{
+#home-about a:hover, .box a:hover{
     color: #3f3f3f;
 }
 
@@ -203,7 +203,7 @@ h2{
     height: fit-content;
     line-height: 2;
     color: var(--text-color);
-    box-shadow: 0 0 20px #3f3f3f;
+    box-shadow: var(--box-shadow);
     padding: 25px;
     margin: 30px;
 }
@@ -226,7 +226,7 @@ h2{
     padding-right: 25px; 
     color: var(--text-color);
     background-color:rgb(247, 246, 245);
-    box-shadow: 0 0 20px #3f3f3f;
+    box-shadow: var(--box-shadow);
     /* transform: ; */
 }
 
@@ -236,7 +236,7 @@ h2{
     margin-right: auto;
     margin-left: auto;
     font-size: 1rem;
-    box-shadow: 0 0 20px #3f3f3f;
+    box-shadow:var(--box-shadow);
 }
 
 .table-content thead th{
@@ -267,8 +267,8 @@ h2{
 .container-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid with flexible columns */
-    gap: 30px; /* Space between items */
-    margin: 0 auto; /* Center grid and remove the 10% margin */
+    gap: 30px;
+    margin: 0 auto; /* Center grid margin */
     margin-bottom: 20px;
     padding: 0 5%; /* Add padding to both sides */
     background-color: var(--HF-color);
@@ -312,24 +312,6 @@ h2{
 }
 
 
-/* .container-grid {
-    display: grid;
-    grid-template-columns: repeat(1fr);
-    gap: 30PX; 
-    margin: 10%; 
-    background-color: var(--HF-color);
-    justify-content: space-between;
-}
-
-.container-box {
-    height: 500px;
-    width: auto; 
-    background-color : lightblue;
-    padding: 20px;
-    margin-left: 5%;
-    margin-right: 5%;
-} */
-
 
 /* Service */
 .container-flex{
@@ -343,7 +325,7 @@ h2{
 }
 
 .box-flex{
-    box-shadow: 0 0 25px #3f3f3f;
+    box-shadow: var(--box-shadow);
     margin: 30px;
     border-radius: 5px;
    
@@ -377,7 +359,7 @@ h2{
 
 /* Forms*/
 .registration-form{
-    background:url("./Images/Home3.jpg") no-repeat center;
+    background:url("./Images/form_img\ x3.webp") no-repeat center;
     background-size: cover;
     margin: 5%;
 }
@@ -394,6 +376,18 @@ h2{
     text-align: center; 
     text-transform: uppercase;
     font-size: 30px;}
+fieldset{
+    border: 2px solid #333;
+    padding: 3%;
+    margin: 10px;
+}
+
+legend{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-color);
+    text-align: left;
+}
 
 .form-box label{
     font-size: 20px;
@@ -416,19 +410,36 @@ h2{
     margin: 10px 0;
 }
 
-.form-box input[type="radio"]{
+.radio{
+    flex: 2;
+    display: flex;
+    flex-direction: row;
     margin: 10px 0;
     gap: 10px;
+    width: 20px;
+    margin-left: 10px;
+    align-items: center;
 
 }
 
+.radio-main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 0;
+    gap: 100px;
+    width: 20px;
+    margin-left: 10px;
+    
+}
+
 #submit1{
-    /* background-color: #2e838b; */
-    background-color:#3481887e;
+    background-color: #2e838b;
     padding: 15px;
     border: none;
     width: 100%;
     font-weight: bold;
+    color: white;
 }
 
 #submit1:hover{
@@ -465,7 +476,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     gap: 20px;
-    max-width: 1000px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
     background-color: #f8f8f8;
