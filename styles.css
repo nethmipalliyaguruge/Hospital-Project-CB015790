@@ -361,6 +361,7 @@ h2{
 .registration-form{
     background:url("./Images/form_img\ x3.webp") no-repeat center;
     background-size: cover;
+    background-attachment: fixed;
     margin: 5%;
 }
 
