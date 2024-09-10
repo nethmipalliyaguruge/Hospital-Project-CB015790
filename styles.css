@@ -214,6 +214,80 @@ h2{
     
 }
 
+/* Media query for screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+
+    video{
+        justify-content: center;
+        height: 25vh;
+        width: 100%;
+
+    }
+
+    .intro {
+        text-align: center;
+        color: var(--text-color);
+        font-size: medium;
+        margin-bottom: 5%;
+    }
+
+    h1 {
+        color: #2e838b;
+        font-size: 1.5rem; /* Adjusted for smaller screens */
+    }
+
+    h2 {
+        text-indent: 2%;
+        font-size: 1.2rem; /* Adjusted for smaller screens */
+    }
+
+    .hero {
+        height: 50vh; /* Reduced height for smaller screens */
+        background-size: contain;
+    }
+
+    #overlayer {
+        font-size: 2rem; /* Reduced font size */
+        text-indent: 1cm;
+        height: 50vh;
+        margin-top: 5%;
+    }
+
+    #welcome-msg {
+        margin-top: 20px;
+        padding: 5%;
+        font-size: 1rem;
+    }
+
+    .video-container {
+        height: 25vh; /* Reduced height for smaller screens */
+        max-height: 50vh; /*Restricting video container height*/
+    }
+
+    .home {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+    }
+
+    #home-about {
+        margin-top: 30px;
+        padding: 15px;
+    }
+
+    .box {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .home img:hover {
+        transform: none;
+        transition: none; /* Removing hover transform on smaller screens */
+    }
+}
+
+
 
 /* About Us */
 .brunch{
@@ -227,7 +301,10 @@ h2{
     color: var(--text-color);
     background-color:rgb(247, 246, 245);
     box-shadow: var(--box-shadow);
-    /* transform: ; */
+}
+
+.brunch:hover{
+    transform: scale(1.05);
 }
 
 .table-content{
@@ -260,6 +337,49 @@ h2{
 
 .table-content tbody tr:last-of-type{
     border-bottom: #3f3f3f 2px solid;
+}
+
+/* Media query for screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+
+    .brunch {
+        flex-direction: column; /* Stack items vertically on small screens */
+        justify-content: center;
+        align-items: center;
+        column-gap: 0; /* Remove unnecessary gaps */
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .brunch:hover {
+        transform: none; /* Disable hover scaling on smaller screens */
+    }
+
+    .table-content {
+        font-size: 0.8rem; /* Reduce table font size */
+        margin: 10px; /* Adjust margins */
+        box-shadow: none; /* Optional: remove shadows for a cleaner look */
+    }
+
+    .table-content thead th {
+        padding: 10px 5px; /* Adjust padding for small screens */
+    }
+
+    .table-content tbody tr {
+        border-bottom: #3f3f3f solid 0.5px;
+    }
+
+    .table-content th, .table-content td {
+        padding: 15px 10px; /* Reduce padding for smaller screens */
+    }
+
+    .table-content tbody tr:nth-child(even) {
+        background-color: #ddd; /* Slightly lighter background for readability */
+    }
+
+    .table-content tbody tr:last-of-type {
+        border-bottom: #3f3f3f 1px solid;
+    }
 }
 
 
@@ -305,9 +425,34 @@ h2{
     transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
-@media (max-width: 768px) {
+/* Media query for screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+
     .container-grid {
-        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Reduce min column width for small screens */
+        gap: 15px; /* Reduce gap between grid items */
+        padding: 0 2%; /* Reduce padding on the sides */
+        margin-bottom: 10px;
+    }
+
+    .container-box {
+        padding: 15px; /* Reduce padding inside the container box */
+        box-shadow: none; /* Optional: remove shadow for a cleaner mobile look */
+        border-radius: 5px; /* Slightly reduce corner radius for smaller screens */
+    }
+
+    .container-box h3 {
+        font-size: 1rem; /* Adjust heading size */
+        margin: 5px 0; /* Reduce margin for headings */
+    }
+
+    .container-box p {
+        font-size: 14px; /* Adjust paragraph font size for better readability */
+        line-height: 1.5;
+    }
+
+    .container-box:hover {
+        transform: none; /* Disable hover zoom effect on smaller screens */
     }
 }
 
@@ -329,6 +474,10 @@ h2{
     margin: 30px;
     border-radius: 5px;
    
+}
+
+.box-flex:hover{
+    transform: scale(1.05);
 }
 
 .service-name{
@@ -356,6 +505,56 @@ h2{
     font-weight: bold;
     font-size: large;
 }
+
+#patient-reg button:hover{
+    background-color: #3f3f3f;
+    color: white;
+}
+
+/* Media query for screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+
+    .container-flex {
+        flex-direction: column; /* Stack flex items vertically on smaller screens */
+        justify-content: center;
+        align-items: center;
+        column-gap: 0; /* Remove column gap */
+        margin: 10px 0; /* Adjust margins */
+    }
+
+    .box-flex {
+        margin: 15px; /* Reduce margin */
+        width: 90%; /* Make box take most of the screen width */
+    }
+
+    .box-flex:hover {
+        transform: none; /* Disable hover scaling on smaller screens */
+    }
+
+    .service-name {
+        font-size: medium; /* Adjust font size for smaller screens */
+        margin-bottom: 5px; /* Add spacing below text */
+    }
+
+    #patient-reg {
+        margin: 20px; /* Reduce margin */
+    }
+
+    #patient-reg button {
+        padding: 10px; /* Adjust padding for smaller screens */
+        font-size: medium; /* Adjust font size */
+    }
+
+    #patient-reg a {
+        font-size: medium; /* Reduce font size */
+    }
+
+    #patient-reg button:hover {
+        background-color: #333; /* Darken button background on hover */
+        color: white;
+    }
+}
+
 
 /* Forms*/
 .registration-form{
@@ -461,6 +660,63 @@ legend{
     color: white;
 }
 
+/* Media query for screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+
+    .registration-form {
+        margin: 2%; /* Reduce margin for smaller screens */
+        background-size: contain; /* Adjust background image size */
+        background-attachment: scroll; /* Fix background for mobile scrolling */
+    }
+
+    .form-box {
+        margin: 5%; /* Reduce margin */
+        padding: 15px; /* Reduce padding */
+        opacity: 95%; /* Slightly increase opacity for readability */
+    }
+
+    .form-box h1 {
+        font-size: 24px; /* Reduce font size for smaller screens */
+    }
+
+    fieldset {
+        padding: 2%; /* Adjust padding */
+        margin: 5px; /* Reduce margin */
+    }
+
+    legend {
+        font-size: 18px; /* Adjust font size */
+    }
+
+    .form-box label {
+        font-size: 18px; /* Adjust label font size */
+    }
+
+    .form-box input,
+    .form-box select {
+        padding: 8px 2px; /* Adjust padding for smaller screens */
+        margin: 8px 0; /* Reduce margin */
+    }
+
+    .radio-main {
+        flex-direction: column; /* Stack radio buttons vertically */
+        gap: 10px; /* Reduce gap */
+        margin-left: 0; /* Remove margin-left for better alignment */
+    }
+
+    .radio {
+        flex-direction: column; /* Stack individual radio buttons */
+        gap: 5px; /* Reduce gap */
+        width: 100%; /* Make radio buttons responsive */
+    }
+
+    #submit1, #reset1 {
+        padding: 10px; /* Adjust button padding */
+        font-size: medium; /* Adjust button font size */
+    }
+}
+
+
 
 /* Footer Styling */
 footer {
@@ -525,12 +781,31 @@ footer p {
 }
 
 
-@media (max-width: 768px) {
+
+/* Media query for screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+
     .footer {
         flex-direction: column; /* Stack items vertically on smaller screens */
     }
 
+    .footer img.f_logo {
+        width: 120px; /* Reduce logo size for smaller screens */
+        margin-bottom: 10px; /* Add margin below the logo */
+    }
+
     .contact-section, .branches-section {
-        text-align: center;
+        text-align: center; /* Center text for smaller screens */
+        font-size: 14px; /* Reduce font size */
+        line-height: 1.4; /* Adjust line height for readability */
+    }
+
+    .contact-section span, .branches-section span {
+        font-size: 16px; /* Reduce the font size of headings */
+    }
+
+    footer p {
+        font-size: 12px; /* Adjust font size of paragraph text */
+        margin-top: 15px; /* Adjust margin for smaller screens */
     }
 }
