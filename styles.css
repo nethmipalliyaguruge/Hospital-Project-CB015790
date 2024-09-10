@@ -10,7 +10,7 @@ body{
     margin: 0px;
 }
 
-    /*for navigation bar position: sticky; */
+
     
 
 /* Header Styling */
@@ -78,17 +78,19 @@ header {
     header {
         flex-direction: column;
         align-items: flex-start;
+        align-items: center;
     }
 
     .header-content {
         flex-direction: column;
         align-items: flex-start;
+        align-items: center;
         width: 100%;
     }
 
     .emergency-call {
         position: static;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
 
     .navigation {
@@ -97,6 +99,15 @@ header {
         position: static;
         width: 100%;
         justify-content: center;
+        align-items: center;
+    }
+    .navigation a {
+        font-size: 16px;
+    }
+
+    .navigation a:hover {
+        font-size: 18px;
+        border-bottom: #333;
     }
 }
 
@@ -123,6 +134,28 @@ h2{
     color: var(--text-color);
 }
 
+@media only screen and (max-width: 768px) {
+
+    h1 {
+        color: #2e838b;
+        font-size: 1.5rem; /* Adjusted for smaller screens */
+        margin-top: 50px;
+    }
+
+    h2 {
+        text-indent: 2%;
+        font-size: 1.2rem; /* Adjusted for smaller screens */
+        margin: 50px;
+        text-align: center;
+    }
+
+    p{
+        font-size: 1rem;
+        text-align: justify;
+        line-height: 1.6;
+        margin: 10px;
+    }
+}
 
 /* Home page */
 .hero{
@@ -217,6 +250,12 @@ h2{
 /* Media query for screens smaller than 768px */
 @media only screen and (max-width: 768px) {
 
+    .hero {
+        height: 50vh; /* Reduced height for smaller screens */
+        background-size: contain;
+        background-image: url("Images/hero1\(mobile\).jpg");
+    }
+
     video{
         justify-content: center;
         height: 25vh;
@@ -229,16 +268,7 @@ h2{
         color: var(--text-color);
         font-size: medium;
         margin-bottom: 5%;
-    }
-
-    h1 {
-        color: #2e838b;
-        font-size: 1.5rem; /* Adjusted for smaller screens */
-    }
-
-    h2 {
-        text-indent: 2%;
-        font-size: 1.2rem; /* Adjusted for smaller screens */
+        bottom: auto;
     }
 
     .hero {
@@ -261,7 +291,7 @@ h2{
 
     .video-container {
         height: 25vh; /* Reduced height for smaller screens */
-        max-height: 50vh; /*Restricting video container height*/
+        max-height: 50vh;  /* Restricting video container height */
     }
 
     .home {
@@ -279,6 +309,7 @@ h2{
     .box {
         margin: 15px;
         padding: 15px;
+        text-align: justify;
     }
 
     .home img:hover {
@@ -306,6 +337,7 @@ h2{
 .brunch:hover{
     transform: scale(1.05);
 }
+
 
 .table-content{
     border-collapse: collapse;
@@ -353,6 +385,23 @@ h2{
 
     .brunch:hover {
         transform: none; /* Disable hover scaling on smaller screens */
+    }
+    .brunch img{
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+    
+    .brunch p{
+        text-align: justify;
+        padding: 25px;
+        line-height: 1.6;
+    }
+    
+    .brunch iframe{
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
     }
 
     .table-content {
@@ -406,7 +455,6 @@ h2{
 
 .container-box img {
     max-width: 100%; /* Make the image responsive */
-    /* border-radius: 50%; Make the image circular */
     margin-bottom: 15px; /* Space below the image */
 }
 
@@ -448,7 +496,7 @@ h2{
 
     .container-box p {
         font-size: 14px; /* Adjust paragraph font size for better readability */
-        line-height: 1.5;
+        line-height: 1.7;
     }
 
     .container-box:hover {
@@ -529,6 +577,11 @@ h2{
 
     .box-flex:hover {
         transform: none; /* Disable hover scaling on smaller screens */
+    }
+
+    .box-flex img {
+        width: 100%; /* Make image responsive */
+        height: auto;
     }
 
     .service-name {
@@ -665,7 +718,7 @@ legend{
 
     .registration-form {
         margin: 2%; /* Reduce margin for smaller screens */
-        background-size: contain; /* Adjust background image size */
+        background-size:cover; /* Adjust background image size */
         background-attachment: scroll; /* Fix background for mobile scrolling */
     }
 
@@ -689,13 +742,13 @@ legend{
     }
 
     .form-box label {
-        font-size: 18px; /* Adjust label font size */
+        font-size: 16px; /* Adjust label font size */
     }
 
     .form-box input,
     .form-box select {
-        padding: 8px 2px; /* Adjust padding for smaller screens */
-        margin: 8px 0; /* Reduce margin */
+        padding: 8px 0px; /* Adjust padding for smaller screens */
+        margin: 8px 0px; /* Reduce margin */
     }
 
     .radio-main {
@@ -705,9 +758,10 @@ legend{
     }
 
     .radio {
-        flex-direction: column; /* Stack individual radio buttons */
+        flex-direction: row; /* Stack individual radio buttons */
         gap: 5px; /* Reduce gap */
         width: 100%; /* Make radio buttons responsive */
+        margin: 0; /* Remove margin */
     }
 
     #submit1, #reset1 {
