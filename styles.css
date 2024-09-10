@@ -403,31 +403,31 @@ h2{
         height: auto;
         border-radius: 5px;
     }
-
-    .table-content {
-        font-size: 0.8rem; /* Reduce table font size */
-        margin: 10px; /* Adjust margins */
-        box-shadow: none; /* Optional: remove shadows for a cleaner look */
+    .table-content{
+        margin: 10px;
     }
 
-    .table-content thead th {
-        padding: 10px 5px; /* Adjust padding for small screens */
+    table thead,tbody,tfoot,th,td,tr{
+        display: block;
+        /* text-align: center; */
+    }
+    table th{
+        display: none; /* we are using this when it's in the mobile the headlnes won't display */
     }
 
-    .table-content tbody tr {
-        border-bottom: #3f3f3f solid 0.5px;
-    }
-
-    .table-content th, .table-content td {
-        padding: 15px 10px; /* Reduce padding for smaller screens */
-    }
-
-    .table-content tbody tr:nth-child(even) {
-        background-color: #ddd; /* Slightly lighter background for readability */
+    table td{
+        border-bottom: 1px solid black;
     }
 
     .table-content tbody tr:last-of-type {
         border-bottom: #3f3f3f 1px solid;
+    }
+
+    table td::before{
+        content: attr(data-label);
+        font-weight: bold;
+        text-align: left;
+        
     }
 }
 
