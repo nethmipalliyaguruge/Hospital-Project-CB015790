@@ -77,13 +77,11 @@ header {
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        align-items: flex-start;
         align-items: center;
     }
 
     .header-content {
         flex-direction: column;
-        align-items: flex-start;
         align-items: center;
         width: 100%;
     }
@@ -159,7 +157,7 @@ h2{
 
 /* Home page */
 .hero{
-    background-image: url("Images/hero1.jpg");
+    background-image: url("Images/hero1.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -167,7 +165,7 @@ h2{
 }
 
 .hero:hover{
-    background-image: url("Images/Home4.jpg");
+    background-image: url("Images/Home4.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -253,7 +251,7 @@ h2{
     .hero {
         height: 50vh; /* Reduced height for smaller screens */
         background-size: contain;
-        background-image: url("Images/hero1\(mobile\).jpg");
+        background-image: url("Images/hero1\(mobile\).webp");
     }
 
     video{
@@ -405,6 +403,7 @@ h2{
     }
     .table-content{
         margin: 10px;
+        justify-content: center;
     }
 
     table thead,tbody,tfoot,th,td,tr{
