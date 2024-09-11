@@ -36,82 +36,81 @@
 
     <main>
         <div class="registration-form">
-        <div class="form-box">
-            <h1>Patient Registration</h1>
-            <form action="#" enctype="multipart/form-data">  <!-- enctype uses when the form contains large files like images it will break to multipart -->
-                <fieldset>
-                    <legend>Patient Details</legend>
-    
-                    <label for="name1">Name : </label>
-                    <input type="text" name="name1" id="name1" placeholder="Full name"  required><br><br>
-    
-                    <label for="email1">Email : </label>
-                    <input type="email" name="email1" id="email1" placeholder="@gmail.com" required><br><br>
-    
-                    <label for="contact1">Conatct Number : </label>
-                    <input type="text" minlength="10" maxlength="12" name="contact1" id="contact1" placeholder="+94 xx xxxx xxx"  required><br><br>
-    
-                    <label for="DOB">Date of Birth : </label>
-                    <input type="date" name="DOB" id="DOB"><br><br>
-    
-                    <label for="gender1">Gender : </label>
-                    <div class="radio-main">
-                        <div class="radio"><input type="radio" name="gender1" id="radio1">
-                        <label for="radio1">Male</label></div>
-                        <div class="radio"><input type="radio" name="gender1" id="radio2">
-                        <label for="radio2">Female</label></div>
-                        <div class="radio"><input type="radio" name="gender1" id="radio3">
-                        <label for="radio3">Other</label><br><br></div>
-                     </div>
-    
-                    <label for="marital_S">Marital Status : </label>
-                    <div class="radio-main">
-                        <div class="radio"><input type="radio" name="marital_S" id="radio4">
-                        <label for="radio4">Single</label></div>
-                        <div class="radio"><input type="radio" name="marital_S" id="radio5">
-                        <label for="radio5">Married</label></div>
-                        <div class="radio"><input type="radio" name="marital_S" id="radio6">
-                        <label for="radio6">Divorced</label></div>
-                        <div class="radio"><input type="radio" name="marital_S" id="radio7">
-                        <label for="radio7">Widow</label><br><br></div>
-                    </div>
-                    
-                    <label for="Insurance">Insurance Name : </label>
-                    <input type="text" name="Insurance" id="Insurance"><br><br>
-    
-                    <label for="Medi">Taking any medications, currently? </label>
-                    <div class="radio-main">
-                    <div class="radio"><input type="radio" name="Medi" id="radio8">
-                    <label for="radio8">Yes</label></div>
-                    <div class="radio"><input type="radio" name="Medi" id="radio9">
-                    <label for="radio9">No</label></div><br><br></div>
-    
-                    <label for="history">If yes, upload the past medical history : </label>
-                    <input type="file" name="history" id="history">
-                </fieldset>
-    
-                <fieldset>
-                    <legend>In case of emergency</legend>
-                    
-                    <label for="e_name">Name : </label>
-                    <input type="text" name="e_name" id="e_name" placeholder="Full name" required><br><br>
-    
-                    <label for="contact2">Contact number : </label>
-                    <input type="text" minlength="10" maxlength="10" name="contact2" id="contact2" placeholder="+94 xx xxxx xxx" required><br><br>  <!-- pattern="[0-9]{2} [0-9]{4} [0-9]{3} -->
-    
-                    <label for="relationship">Relationship : </label>
-                    <input type="text" name="relationship" id="relationship">
-                </fieldset>
-                <br>
-    
-                    <input type="submit" name="submit1" id="submit1">
-                    <input type="reset" name="reset1" id="reset1">
-            </form>
-        </div>
-        </div>
+            <div class="form-box">
+                <h1>Patient Registration</h1>
+                <form action="#" enctype="multipart/form-data">  <!-- enctype uses when the form contains large files like images it will break to multipart -->
+                    <fieldset>
+                        <legend>Patient Details</legend>
         
+                        <label for="name1">Name : </label>
+                        <input type="text" name="name1" id="name1" placeholder="Full name"  required><br><br>
+        
+                        <label for="email1">Email : </label>
+                        <input type="email" name="email1" id="email1" placeholder="@gmail.com" required><br><br>
+        
+                        <label for="contact1">Conatct Number : </label>
+                        <input type="text" minlength="10" maxlength="12" name="contact1" id="contact1" placeholder="+94 xx xxxx xxx"  required><br><br>
+        
+                        <label for="DOB">Date of Birth : </label>
+                        <input type="date" name="DOB" id="DOB"><br><br>
+        
+                        <label for="gender1">Gender : </label>
+                        <div class="radio-main">
+                            <div class="radio"><input type="radio" name="gender1" id="radio1">
+                            <label for="radio1">Male</label></div>
+                            <div class="radio"><input type="radio" name="gender1" id="radio2">
+                            <label for="radio2">Female</label></div>
+                            <div class="radio"><input type="radio" name="gender1" id="radio3">
+                            <label for="radio3">Other</label><br><br></div>
+                        </div>
+        
+                        <label for="marital_S">Marital Status : </label>
+                        <div class="radio-main">
+                            <div class="radio"><input type="radio" name="marital_S" id="radio4">
+                            <label for="radio4">Single</label></div>
+                            <div class="radio"><input type="radio" name="marital_S" id="radio5">
+                            <label for="radio5">Married</label></div>
+                            <div class="radio"><input type="radio" name="marital_S" id="radio6">
+                            <label for="radio6">Divorced</label></div>
+                            <div class="radio"><input type="radio" name="marital_S" id="radio7">
+                            <label for="radio7">Widow</label><br><br></div>
+                        </div>
+                        
+                        <label for="Insurance">Insurance Name : </label>
+                        <input type="text" name="Insurance" id="Insurance"><br><br>
+        
+                        <label for="Medi">Taking any medications, currently? </label>
+                        <div class="radio-main">
+                        <div class="radio"><input type="radio" name="Medi" id="radio8">
+                        <label for="radio8">Yes</label></div>
+                        <div class="radio"><input type="radio" name="Medi" id="radio9">
+                        <label for="radio9">No</label></div><br><br></div>
+        
+                        <label for="history">If yes, upload the past medical history : </label>
+                        <input type="file" name="history" id="history">
+                    </fieldset>
+        
+                    <fieldset>
+                        <legend>In case of emergency</legend>
+                        
+                        <label for="e_name">Name : </label>
+                        <input type="text" name="e_name" id="e_name" placeholder="Full name" required><br><br>
+        
+                        <label for="contact2">Contact number : </label>
+                        <input type="text" minlength="10" maxlength="10" name="contact2" id="contact2" placeholder="+94 xx xxxx xxx" required><br><br>  <!-- pattern="[0-9]{2} [0-9]{4} [0-9]{3} -->
+        
+                        <label for="relationship">Relationship : </label>
+                        <input type="text" name="relationship" id="relationship">
+                    </fieldset>
+                    <br>
+        
+                        <input type="submit" name="submit1" id="submit1">
+                        <input type="reset" name="reset1" id="reset1">
+                </form>
+            </div>
+        </div>
         <br>
-
+        <button class="btn"><a href="#">Top</a></button>
     </main>
     <footer>
         <div class="footer">
