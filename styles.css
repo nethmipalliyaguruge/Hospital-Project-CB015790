@@ -109,10 +109,14 @@ header {
     }
 }
 
+
+
 /* common */
 
 video{
+    display: flex;
     justify-content: center;
+    margin: 0 auto; /* Center the video horizontally */
 }
 
 .intro {
@@ -142,7 +146,7 @@ h2{
 
     h2 {
         text-indent: 2%;
-        font-size: 1.2rem; /* Adjusted for smaller screens */
+        font-size: 1.2rem; 
         margin: 50px;
         text-align: center;
     }
@@ -152,6 +156,24 @@ h2{
         text-align: justify;
         line-height: 1.6;
         margin: 10px;
+    }
+}
+
+/* Media query for tablet devices */
+@media (min-width: 768px) and (max-width: 1024px){
+    h1 {
+        font-size: 2rem; /* Adjusted for tablet screens */
+    }
+
+    h2 {
+        font-size: 1.5rem; 
+    }
+
+    p {
+        font-size: 1.1rem;
+        text-align: justify;
+        line-height: 1.6;
+        padding: 10px;
     }
 }
 
@@ -316,6 +338,15 @@ h2{
     }
 }
 
+/* Media query for tablet devices */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .video-container{
+       height: 50vh;
+       margin: 10%;
+       padding: 10%;
+    }
+}
+
 
 
 /* About Us */
@@ -338,7 +369,7 @@ h2{
 
 
 .table-content{
-    border-collapse: collapse;
+    border-collapse: collapse; /* Collapse table borders */
     margin: 25px;
     margin-right: auto;
     margin-left: auto;
@@ -408,7 +439,6 @@ h2{
 
     table thead,tbody,tfoot,th,td,tr{
         display: block;
-        /* text-align: center; */
     }
     table th{
         display: none; /* we are using this when it's in the mobile the headlnes won't display */
@@ -430,15 +460,27 @@ h2{
     }
 }
 
+/* Media query for tablet devices */
+@media (min-width: 768px) and (max-width: 1024px){
+    .brunch{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0;
+        margin: 10px;
+        padding: 10px;
+    }
+}
+
 
 /* Doctors */
 .container-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid with flexible columns */
     gap: 30px;
-    margin: 0 auto; /* Center grid margin */
+    margin: 0 auto;
     margin-bottom: 20px;
-    padding: 0 5%; /* Add padding to both sides */
+    padding: 0 5%;
     background-color: var(--HF-color);
     justify-content: center;
 }
@@ -446,15 +488,15 @@ h2{
 .container-box {
     background-color: lightblue;
     padding: 20px;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-    text-align: center; /* Center the content */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
     transition: transform 0.3s ease-in-out; /* Smooth hover animation */
 }
 
 .container-box img {
     max-width: 100%; /* Make the image responsive */
-    margin-bottom: 15px; /* Space below the image */
+    margin-bottom: 15px; 
 }
 
 .container-box h3 {
@@ -463,7 +505,7 @@ h2{
 }
 
 .container-box p {
-    font-size: 16px; /* Adjust font size for better readability */
+    font-size: 16px;
     line-height: 2;
     color:var(--text-color);
 }
@@ -477,24 +519,24 @@ h2{
 
     .container-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Reduce min column width for small screens */
-        gap: 15px; /* Reduce gap between grid items */
-        padding: 0 2%; /* Reduce padding on the sides */
+        gap: 15px;
+        padding: 0 2%; 
         margin-bottom: 10px;
     }
 
     .container-box {
-        padding: 15px; /* Reduce padding inside the container box */
+        padding: 15px;
         box-shadow: none; /* Optional: remove shadow for a cleaner mobile look */
-        border-radius: 5px; /* Slightly reduce corner radius for smaller screens */
+        border-radius: 5px; 
     }
 
     .container-box h3 {
-        font-size: 1rem; /* Adjust heading size */
-        margin: 5px 0; /* Reduce margin for headings */
+        font-size: 1rem; 
+        margin: 5px 0; 
     }
 
     .container-box p {
-        font-size: 14px; /* Adjust paragraph font size for better readability */
+        font-size: 14px; 
         line-height: 1.7;
     }
 
@@ -565,17 +607,17 @@ h2{
         flex-direction: column; /* Stack flex items vertically on smaller screens */
         justify-content: center;
         align-items: center;
-        column-gap: 0; /* Remove column gap */
-        margin: 10px 0; /* Adjust margins */
+        column-gap: 0;
+        margin: 10px 0;
     }
 
     .box-flex {
-        margin: 15px; /* Reduce margin */
+        margin: 15px; 
         width: 90%; /* Make box take most of the screen width */
     }
 
     .box-flex:hover {
-        transform: none; /* Disable hover scaling on smaller screens */
+        transform: none; 
     }
 
     .box-flex img {
@@ -584,25 +626,25 @@ h2{
     }
 
     .service-name {
-        font-size: medium; /* Adjust font size for smaller screens */
-        margin-bottom: 5px; /* Add spacing below text */
+        font-size: medium; 
+        margin-bottom: 5px;
     }
 
     #patient-reg {
-        margin: 20px; /* Reduce margin */
+        margin: 20px;
     }
 
     #patient-reg button {
-        padding: 10px; /* Adjust padding for smaller screens */
-        font-size: medium; /* Adjust font size */
+        padding: 10px;
+        font-size: medium;
     }
 
     #patient-reg a {
-        font-size: medium; /* Reduce font size */
+        font-size: medium;
     }
 
     #patient-reg button:hover {
-        background-color: #333; /* Darken button background on hover */
+        background-color: #333;
         color: white;
     }
 }
@@ -716,15 +758,15 @@ legend{
 @media only screen and (max-width: 768px) {
 
     .registration-form {
-        margin: 2%; /* Reduce margin for smaller screens */
+        margin: 2%; 
         background-size:cover; /* Adjust background image size */
         background-attachment: scroll; /* Fix background for mobile scrolling */
     }
 
     .form-box {
-        margin: 5%; /* Reduce margin */
-        padding: 15px; /* Reduce padding */
-        opacity: 95%; /* Slightly increase opacity for readability */
+        margin: 5%; 
+        padding: 15px; 
+        opacity: 95%; /*for readability */
     }
 
     .form-box h1 {
@@ -732,39 +774,39 @@ legend{
     }
 
     fieldset {
-        padding: 2%; /* Adjust padding */
-        margin: 5px; /* Reduce margin */
+        padding: 2%; 
+        margin: 5px;
     }
 
     legend {
-        font-size: 18px; /* Adjust font size */
+        font-size: 18px;
     }
 
     .form-box label {
-        font-size: 16px; /* Adjust label font size */
+        font-size: 16px;
     }
 
     .form-box input,
     .form-box select {
-        padding: 8px 0px; /* Adjust padding for smaller screens */
-        margin: 8px 0px; /* Reduce margin */
+        padding: 8px 0px; 
+        margin: 8px 0px;
     }
 
     .radio-main {
-        flex-direction: column; /* Stack radio buttons vertically */
-        gap: 10px; /* Reduce gap */
-        margin-left: 0; /* Remove margin-left for better alignment */
+        flex-direction: column; /*Align radio buttons vertically */
+        gap: 10px; 
+        margin-left: 0;
     }
 
     .radio {
-        flex-direction: row; /* Stack individual radio buttons */
-        gap: 5px; /* Reduce gap */
+        flex-direction: row; /* Align radio buttons horizontally */
+        gap: 5px; 
         width: 100%; /* Make radio buttons responsive */
-        margin: 0; /* Remove margin */
+        margin: 0;
     }
 
     #submit1, #reset1 {
-        padding: 10px; /* Adjust button padding */
+        padding: 10px;
         font-size: medium; /* Adjust button font size */
     }
 }
@@ -839,26 +881,26 @@ footer p {
 @media only screen and (max-width: 768px) {
 
     .footer {
-        flex-direction: column; /* Stack items vertically on smaller screens */
+        flex-direction: column; /* Align items vertically on smaller screens */
     }
 
     .footer img.f_logo {
         width: 120px; /* Reduce logo size for smaller screens */
-        margin-bottom: 10px; /* Add margin below the logo */
+        margin-bottom: 10px;
     }
 
     .contact-section, .branches-section {
         text-align: center; /* Center text for smaller screens */
-        font-size: 14px; /* Reduce font size */
-        line-height: 1.4; /* Adjust line height for readability */
+        font-size: 14px;
+        line-height: 1.4;
     }
 
     .contact-section span, .branches-section span {
-        font-size: 16px; /* Reduce the font size of headings */
+        font-size: 16px;
     }
 
     footer p {
-        font-size: 12px; /* Adjust font size of paragraph text */
-        margin-top: 15px; /* Adjust margin for smaller screens */
+        font-size: 12px;
+        margin-top: 15px;
     }
 }
