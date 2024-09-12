@@ -419,6 +419,10 @@ h2{
     text-align: left;
 }
 
+table tbody td a{
+    text-decoration: none;
+}
+
 .table-content tbody tr:nth-child(even){
     background-color: #ccc;
 }
