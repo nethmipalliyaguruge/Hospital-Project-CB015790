@@ -428,6 +428,16 @@ h2{
     border-bottom: #3f3f3f 2px solid;
 }
 
+.table-content tfoot{
+    background-color: #8e8c8c;
+    color: white;
+    font-weight: bold;
+}
+
+.table-content tfoot td{
+    text-align: center;
+}
+
 /* Media query for screens smaller than 768px */
 @media only screen and (max-width: 768px) {
 
