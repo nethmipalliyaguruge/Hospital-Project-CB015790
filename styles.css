@@ -261,14 +261,13 @@ h2{
 
 #home-about{
     box-shadow:var(--box-shadow);
-    /* margin: 10px; */
     margin-top: 50px;
     padding: 25px;
 }
 
 #home-about a, .box a{
     text-decoration: none;
-    color: #2e838b;
+    color: #007bff;
     font-weight: bold;
     font-size: large;
 }
@@ -908,7 +907,8 @@ footer {
 footer p {
     margin-top: 20px;
     font-size: 14px;
-    color: #5d5d5d;
+    color: #333;
+    /* #5d5d5d */
     text-align: center;
     width: 100%;
 }
