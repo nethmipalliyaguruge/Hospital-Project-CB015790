@@ -1,13 +1,17 @@
 :root{
     --HF-color:#cfd2d3ad;
+    --gradient-bg: linear-gradient(90deg, white, white);
     --text-color:#575656;
-    --box-shadow: 0 0 20px #3f3f3f;
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 body{
-    border: 1px solid #ccc;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid #ccc;
     padding: 0px;
-    margin: 0px;
+    margin: 0px; */
 }
 
 
@@ -15,62 +19,107 @@ body{
 
 /* Header Styling */
 header {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1px 20px;
     background-color: var(--HF-color);
-    height: auto;
-    
+    height: auto; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: var(--gradient-bg);
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.header.sticky {
+    padding: 8px 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .logo {
-    width: 150px;
+    width: 100px;
     height: auto;
 }
 
 .header-content {
     flex: 2;
     display: flex;
+    flex-direction: column;
     justify-content: right;
-    align-items: center;
+    align-items:flex-end;
     position: relative;
 }
 
-.emergency-call {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 16px;
-    color: #333;
+.icons{
+    display: flex;
+    gap: 20px;
+    padding: 5px;
+    
 }
 
-.emergency-call a {
-    color: #ff0000;
-    text-decoration: none;
-    font-weight: bold;
+.emergency-call{
+    background-color: white;
 }
 
 .navigation {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
     gap: 20px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
 }
 
 .navigation a {
-    color: #333;
+    /* color: #333;
+    text-decoration: none;
+    font-size: 18px; */
+    color: #02747b;
     text-decoration: none;
     font-size: 18px;
+    position: relative;
+    padding: 5px;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
-.navigation a:hover {
+/* .navigation a:hover {
     text-decoration: underline;
     font-size: 20px;
     color: #2e838b;
+} */
+.navigation a {
+    color: #02747b;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    padding: 5px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navigation a:hover {
+    color: #5c575d;
+    transform: translateY(-3px);
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #5c575d;
+    opacity: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.navigation a:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
 }
 
 /* Responsive Design */
@@ -112,6 +161,24 @@ header {
 
 
 /* common */
+.emergency-call {
+    /* position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 16px;
+    color: #333; */
+    position: sticky;
+    font-size: 16px;
+    color: #02747b;
+    margin-right: 20px;
+}
+
+.emergency-call a {
+    position: sticky;
+    color: #ff0000;
+    text-decoration: none;
+    font-weight: bold;
+}
 
 video{
     display: flex;
@@ -145,16 +212,15 @@ h2{
     border: none;
     align-items:end;
     justify-content: end;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
 }
 .btn:hover{
     background-color: #3f3f3f;
     color: white;
 }
-.btn a{
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
+
 
 @media only screen and (max-width: 768px) {
 
@@ -850,6 +916,106 @@ legend{
         padding: 10px;
         font-size: medium; /* Adjust button font size */
     }
+}
+
+/* Ph1 */
+
+/* .pharmacy-flex{
+    display: flex;
+    flex-direction: row;
+    column-gap: 35px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 10px;
+    box-shadow: var(--box-shadow);
+    margin: 10px;
+    padding: 10px;    
+} */
+
+#ph-main {
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 5px;
+}
+
+#ph-h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+#ph-h2 {
+    margin-top: 30px;
+    color: #333;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #007BFF;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.pharmacy-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pharmacy-box {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+}
+
+.pharmacy-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pharmacy-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.drug-name h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:hover a {
+    color: #ffffff;
 }
 
 
