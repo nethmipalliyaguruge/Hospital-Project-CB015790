@@ -35,7 +35,7 @@
     </header>
 
     <main>
-        <div class="registration-form">
+        <!-- <div class="registration-form">
             <div class="form-box">
                 <h1>Pharmacy</h1>
         <form action="#">
@@ -72,6 +72,54 @@
                 <input type="submit" name="submit1" id="submit1">
                 <input type="reset" name="reset1" id="reset1">
         </form>
+            </div>
+        </div> -->
+        <div class="registration-form">
+            <div class="form-box">
+                <h1>Patient Registration</h1>
+                <form action="#" enctype="multipart/form-data">  <!-- enctype uses when the form contains large files like images it will break to multipart -->
+                    <fieldset>
+                        <legend>Billing Details</legend>
+        
+                        <label for="name1">Name : </label>
+                        <input type="text" name="name1" id="name1" placeholder="Full name"  required><br><br>
+        
+                        <label for="email1">Email : </label>
+                        <input type="email" name="email1" id="email1" placeholder="@gmail.com" required><br><br>
+        
+                        <label for="contact1">Conatct Number : </label>
+                        <input type="text" minlength="10" maxlength="12" name="contact1" id="contact1" placeholder="+94 xx xxxx xxx"  required><br><br>
+        
+                        <label for="patientno">Patient No : </label>
+                        <input type="number" name="patientno" id="patientno"><br><br>
+                    </fieldset>
+        
+                    <fieldset>
+                        <legend>Payment Details</legend>
+                        
+                        <label for="address">Address:</label>
+                        <textarea id="address" name="address" rows="4" required></textarea>
+            
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="city" required>
+
+                        <label for="postal">Postal Code:</label>
+                        <input type="text" id="postal" name="postal" required>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Payment Information</legend>
+                        <label for="card">Credit/Debit Card Number:</label>
+                        <input type="text" id="card" name="card" required>
+                        
+                        <label for="expiry">Expiry Date:</label>
+                        <input type="month" id="expiry" name="expiry" required>
+            
+                        <label for="cvv">CVV:</label>
+                        <input type="password" id="cvv" name="cvv" maxlength="3" required>
+                    </fieldset>
+                    <br>
+                <button>Pay</button>
+                </form>
             </div>
         </div>
         <a href="#"><button class="btn">Top</button></a>
