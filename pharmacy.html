@@ -13,6 +13,7 @@
     <meta name="msapplication-TileColor" content="#dee0e2">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <script src="https://kit.fontawesome.com/6176231e60.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -20,8 +21,16 @@
             <img class="logo" src="Images/LOGO.webp" alt="Picture of the logo">
         </a>
         <div class="header-content">
-            <div class="emergency-call">
-                <big>Emergency call <a href="tel:1313">1313</a></big>
+            <div class="icons">
+                <label class="emergency-call"><big>Emergency call <a href="tel:1313"><i class="fa-solid fa-phone-volume">1313</i></a></big></label>
+                <a href="./login.html"><i class="fa-regular fa-user"></i></a>
+                <div class="cart-icon">
+                <a href="./cart.html"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+                </svg></a>
+                <span>0</span></div>
+                  
+                <!-- <a href="./cart.html" id="cart-icon"><i class="fa-solid fa-cart-plus"></i><span>0</span></a> -->
             </div>
             <nav class="navigation">
                 <a href="index.html">Home</a>
@@ -33,98 +42,463 @@
             </nav>
         </div>
     </header>
-
-    <main>
-        <!-- <div class="registration-form">
-            <div class="form-box">
-                <h1>Pharmacy</h1>
-        <form action="#">
-            <fieldset>
-                <label for="medicine">Select the Medicine : </label>
-                <select>
-                    <option value="">--Select--</option>
-                    <option value="med1">Analgesics</option>
-                    <option value="med2">Antibiotics</option>
-                    <option value="med3">Antidepressants</option>
-                    <option value="med4">Antihistamines</option>
-                    <option value="med5">Antihypertensives </option>
-                </select><br><br>
-                <label for="quantity1">Quantity</label>
-                <input type="number" name="quantity1" id="quantity1" min="0" value="1" required><br><br>
-
-                <label for="name1">Name : </label>
-                <input type="text" name="name1" id="name1" placeholder="Full Name" required><br><br>
-
-                <label for="email1">Email : </label>
-                <input type="email" name="email1" id="email1" placeholder="@gmail.com" required><br><br>
-
-                <label for="contact">Conatct Number : </label>
-                <input type="text" minlength="10" maxlength="12" name="contact" id="contact" placeholder="+94 xx xxxx xxx" required><br><br>
-
-                <label for="patientno">Patient No : </label>
-                <input type="number" name="patientno" id="patientno"><br><br>
-
-
-
-            </fieldset>
-            <br>
-
-                <input type="submit" name="submit1" id="submit1">
-                <input type="reset" name="reset1" id="reset1">
-        </form>
+    
+    <main id="ph-main">
+        <div class="intro">
+            <h1 id="ph-h1">Pharmacy</h1>
+            <!-- <p></p> -->
+        </div>
+        <h2 id="ph-h2">Analgesics</h2>
+        <div class="pharmacy-flex">   
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Paracetamol.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3 class="h3">Paracetamol (500 mg) </h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" class="quantity1" min="1" value="1" required><br>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button class="cart"><a href="">Add to cart</a></button>
+                </div>
             </div>
-        </div> -->
-        <div class="registration-form">
-            <div class="form-box">
-                <h1>Patient Registration</h1>
-                <form action="#" enctype="multipart/form-data">  <!-- enctype uses when the form contains large files like images it will break to multipart -->
-                    <fieldset>
-                        <legend>Billing Details</legend>
-        
-                        <label for="name1">Name : </label>
-                        <input type="text" name="name1" id="name1" placeholder="Full name"  required><br><br>
-        
-                        <label for="email1">Email : </label>
-                        <input type="email" name="email1" id="email1" placeholder="@gmail.com" required><br><br>
-        
-                        <label for="contact1">Conatct Number : </label>
-                        <input type="text" minlength="10" maxlength="12" name="contact1" id="contact1" placeholder="+94 xx xxxx xxx"  required><br><br>
-        
-                        <label for="patientno">Patient No : </label>
-                        <input type="number" name="patientno" id="patientno"><br><br>
-                    </fieldset>
-        
-                    <fieldset>
-                        <legend>Payment Details</legend>
-                        
-                        <label for="address">Address:</label>
-                        <textarea id="address" name="address" rows="4" required></textarea>
-            
-                        <label for="city">City:</label>
-                        <input type="text" id="city" name="city" required>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Ibuprofen.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3 class="h3">Ibuprofen (200 mg)  </h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" class="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button class="cart"><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Diclofenac Sodium.avif" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3 class="h3">Diclofenac Sodium (50 mg)</h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" class="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button class="cart"><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Tramadol.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3 class="h3">Tramadol (50 mg)</h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" class="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button class="cart"><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Naproxen.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3 class="h3">Naproxen (250 mg)</h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" class="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button class="cart"><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Ketoprofen.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3 class="h3">Ketoprofen (50 mg) </h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" class="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button class="cart"><a href="">Add to cart</a></button>
+                </div>
+            </div>            
+        </div>
 
-                        <label for="postal">Postal Code:</label>
-                        <input type="text" id="postal" name="postal" required>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Payment Information</legend>
-                        <label for="card">Credit/Debit Card Number:</label>
-                        <input type="text" id="card" name="card" required>
-                        
-                        <label for="expiry">Expiry Date:</label>
-                        <input type="month" id="expiry" name="expiry" required>
-            
-                        <label for="cvv">CVV:</label>
-                        <input type="password" id="cvv" name="cvv" maxlength="3" required>
-                    </fieldset>
-                    <br>
-                <button>Pay</button>
-                </form>
+        <h2 id="ph-h2">Antibiotics</h2>
+        <div class="pharmacy-flex">   
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Paracetamol.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Paracetamol (500 mg) </h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required><br>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Ibuprofen.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Ibuprofen (200 mg)  </h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Diclofenac Sodium.avif" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Diclofenac Sodium (50 mg)</h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Tramadol.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Tramadol (50 mg)</h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Naproxen.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Naproxen (250 mg)</h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Ketoprofen.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Ketoprofen (50 mg) </h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>            
+        </div>
+        <h2 id="ph-h2">Antihistamines</h2>
+        <div class="pharmacy-flex">   
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Paracetamol.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Paracetamol (500 mg) </h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required><br>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Ibuprofen.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Ibuprofen (200 mg)  </h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Diclofenac Sodium.avif" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Diclofenac Sodium (50 mg)</h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Tramadol.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Tramadol (50 mg)</h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Naproxen.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Naproxen (250 mg)</h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Ketoprofen.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Ketoprofen (50 mg) </h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>            
+        </div>
+
+        <h2 id="ph-h2">Antihypertensives</h2>
+        <div class="pharmacy-flex">   
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Paracetamol.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Paracetamol (500 mg) </h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required><br>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Ibuprofen.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Ibuprofen (200 mg)  </h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Diclofenac Sodium.avif" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Diclofenac Sodium (50 mg)</h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Tramadol.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Tramadol (50 mg)</h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Naproxen.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Naproxen (250 mg)</h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Ketoprofen.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Ketoprofen (50 mg) </h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>            
+        </div>
+
+        <h2 id="ph-h2">Analgesics</h2>
+        <div class="pharmacy-flex">   
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Paracetamol.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Paracetamol (500 mg) </h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required><br>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Ibuprofen.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Ibuprofen (200 mg)  </h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Diclofenac Sodium.avif" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Diclofenac Sodium (50 mg)</h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Tramadol.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Tramadol (50 mg)</h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Naproxen.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Naproxen (250 mg)</h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Ketoprofen.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Ketoprofen (50 mg) </h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>            
+        </div>
+
+        <h2 id="ph-h2"2>Analgesics</h2>
+        <div class="pharmacy-flex">   
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Paracetamol.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Paracetamol (500 mg) </h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required><br>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Ibuprofen.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Ibuprofen (200 mg)  </h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Diclofenac Sodium.avif" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Diclofenac Sodium (50 mg)</h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Tramadol.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Tramadol (50 mg)</h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Naproxen.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Naproxen (250 mg)</h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>
+            <div class="pharmacy-box">
+                <img class="pharmacy-img" src="./Images/Pharmacy/Ketoprofen.jpg" alt="Picture of Analgesics" width="400px" height="250px">
+                <div class="drug-name">
+                    <h3>Ketoprofen (50 mg) </h3>
+                    <p>Rs.1/= per tablet</p>
+                    <label>Quantity</label>
+                    <input type="number" name="quantity1" id="quantity1" min="1" value="1" required>
+                    <button><a href=""><i class="fa-regular fa-heart"></i> Add to Favourites</a></button>
+                    <button><a href="">Add to cart</a></button>
+                </div>
+            </div>            
+        </div>
+
+        <div class="cart">
+            <h1>Cart items</h1>
+            <div class="cart-items">
+                <table class="table-content">
+                    <thead>
+                        <tr><th>Medicine</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">Grand Total</td>
+                            <td id="grand-total">Rs.0/=</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <button id="reset_cart">Reset Cart</button>
+                <button id="apply_fav">Apply Favourites</button>
+                <button id="reset_fav">Reset Favourites</button>
+                <a href="./billing_page.html"><button id="buy_now">Buy Now</button></a>
+                <a href="./billing_page.html"><button>Buy Now</button></a>
+
             </div>
         </div>
-        <a href="#"><button class="btn">Top</button></a>
 
+        <a href="#"><button class="btn">Top</button></a>
+        <script src="./pharmacy.js" defer></script>   
     </main>
+
     <footer>
         <div class="footer">
             <img class="f_logo" src="Images/LOGO.webp" alt="picture of the logo">
@@ -143,6 +517,5 @@
         </div>
         <p>&copy; 2024 Wellspring Hospital. All rights reserved.</p>
     </footer>
-    
 </body>
 </html>

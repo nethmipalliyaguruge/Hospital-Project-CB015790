@@ -64,6 +64,25 @@ header {
     
 }
 
+.cart-icon{
+    position: relative;
+}
+
+.cart-icon span{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    background-color: #ff0000;
+    color: white;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+
+}
+
 .emergency-call{
     background-color: white;
 }

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#dee0e2">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-link">
+            <img class="logo" src="Images/LOGO.webp" alt="Picture of the logo">
+        </a>
+        <div class="header-content">
+            <div class="emergency-call">
+                <big>Emergency call <a href="tel:1313">1313</a></big>
+            </div>
+            <nav class="navigation">
+                <a href="index.html">Home</a>
+                <a href="about us .html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="doctors.html">Our Doctors</a>
+                <a href="consulting reservation.html">Consulting Reservation</a>
+                <a href="pharmacy.html">Pharmacy</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- <div class="registration-form">
+            <div class="form-box">
+                <h1>Pharmacy</h1>
+        <form action="#">
+            <fieldset>
+                <label for="medicine">Select the Medicine : </label>
+                <select>
+                    <option value="">--Select--</option>
+                    <option value="med1">Analgesics</option>
+                    <option value="med2">Antibiotics</option>
+                    <option value="med3">Antidepressants</option>
+                    <option value="med4">Antihistamines</option>
+                    <option value="med5">Antihypertensives </option>
+                </select><br><br>
+                <label for="quantity1">Quantity</label>
+                <input type="number" name="quantity1" id="quantity1" min="0" value="1" required><br><br>
+
+                <label for="name1">Name : </label>
+                <input type="text" name="name1" id="name1" placeholder="Full Name" required><br><br>
+
+                <label for="email1">Email : </label>
+                <input type="email" name="email1" id="email1" placeholder="@gmail.com" required><br><br>
+
+                <label for="contact">Conatct Number : </label>
+                <input type="text" minlength="10" maxlength="12" name="contact" id="contact" placeholder="+94 xx xxxx xxx" required><br><br>
+
+                <label for="patientno">Patient No : </label>
+                <input type="number" name="patientno" id="patientno"><br><br>
+
+
+
+            </fieldset>
+            <br>
+
+                <input type="submit" name="submit1" id="submit1">
+                <input type="reset" name="reset1" id="reset1">
+        </form>
+            </div>
+        </div> -->
+        <div class="registration-form">
+            <div class="form-box">
+                <h1>Billing Details</h1>
+                <form action="#" enctype="multipart/form-data">  <!-- enctype uses when the form contains large files like images it will break to multipart -->
+                    <fieldset>
+                        <legend>Personal Details</legend>
+        
+                        <label for="name1">Name : </label>
+                        <input type="text" name="name1" id="name1" placeholder="Full name"  required><br><br>
+        
+                        <label for="email1">Email : </label>
+                        <input type="email" name="email1" id="email1" placeholder="@gmail.com" required><br><br>
+        
+                        <label for="contact1">Conatct Number : </label>
+                        <input type="text" minlength="10" maxlength="12" name="contact1" id="contact1" placeholder="+94 xx xxxx xxx"  required><br><br>
+        
+                        <label for="patientno">Patient No : </label>
+                        <input type="number" name="patientno" id="patientno"><br><br>
+                    </fieldset>
+        
+                    <fieldset>
+                        <legend>Payment Details</legend>
+                        
+                        <label for="address">Address:</label>
+                        <textarea id="address" name="address" rows="4" required></textarea>
+            
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="city" required>
+
+                        <label for="postal">Postal Code:</label>
+                        <input type="text" id="postal" name="postal" required>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Payment Information</legend>
+                        <label for="card">Credit/Debit Card Number:</label>
+                        <input type="text" id="card" name="card" required>
+                        
+                        <label for="expiry">Expiry Date:</label>
+                        <input type="month" id="expiry" name="expiry" required>
+            
+                        <label for="cvv">CVV:</label>
+                        <input type="password" id="cvv" name="cvv" maxlength="3" required>
+                    </fieldset>
+                    <br>
+                <button id="pay">Pay</button>
+                </form>
+            </div>
+        </div>
+        <a href="#"><button class="btn">Top</button></a>
+        <script src="./billing_page.js" defer></script>
+
+    </main>
+    <footer>
+        <div class="footer">
+            <img class="f_logo" src="Images/LOGO.webp" alt="picture of the logo">
+            <div class="contact-section">
+                <span>Contact Us</span>
+                Address: 114 Norris Canal Rd, Colombo 01000<br>
+                Phone: <a href="tel:+94 11 2140 000">+94 11 2140 000</a><br>
+                Email: <a href="mailto:wellspringhealthcare@gmail.com">wellspringhealthcare@gmail.com</a>
+            </div>
+            <div class="branches-section">
+                <span>Our Branches</span>
+                Colombo: <a href="tel:+94 11 2140 000">+94 11 2140 000</a><br>
+                Kandy: <a href="tel:+94 81 452 8800">+94 81 452 8800</a><br>
+                Galle: <a href="tel:+94 91 464 0640">+94 91 464 0640</a><br>
+            </div>
+        </div>
+        <p>&copy; 2024 Wellspring Hospital. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>
