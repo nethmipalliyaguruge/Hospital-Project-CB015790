@@ -16,19 +16,20 @@
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo-link">
-            <img class="logo" src="Images/LOGO.webp"Picture of the logo">
-        </a>
+        <a href="index.html">
+            <img src="images/LOGO.webp" alt="Picture of the logo" class="logo">
+          </a>
+          
         <div class="header-content">
             <div class="emergency-call">
-                <big>Emergency call <a href="tel:1313">1313</a></big>
+                Emergency call <a href="tel:1313">1313</a>
             </div>
             <nav class="navigation">
                 <a href="index.html">Home</a>
-                <a href="about us .html">About Us</a>
+                <a href="about_us.html">About Us</a>
                 <a href="services.html">Services</a>
                 <a href="doctors.html">Our Doctors</a>
-                <a href="consulting reservation.html">Consulting Reservation</a>
+                <a href="consulting_reservation.html">Consulting Reservation</a>
                 <a href="pharmacy.html">Pharmacy</a>
             </nav>
         </div>
@@ -52,12 +53,12 @@
                         <input type="number" name="patientno" id="patientno"><br><br>
 
                         <label for="doctors">Select the Doctor : </label>
-                        <select>
+                        <select id="doctors" name="doctors">
                             <option value="">--Select--</option>
-                            <option value="doc1">Dr.Alex Middleton</option>
-                            <option value="doc2">Dr.Taylor Windsor</option>
-                            <option value="doc3">Dr.Jordan Rivers</option>
-                            <option value="doc4">Dr.Casey Montgomery</option>
+                            <option value="Dr_Alex_Middleton">Dr.Alex Middleton</option>
+                            <option value="Dr_Taylor_Windsor">Dr.Taylor Windsor</option>
+                            <option value="Dr_Jordan_Rivers">Dr.Jordan Rivers</option>
+                            <option value="Dr_Casey_Montgomery">Dr.Casey Montgomery</option>
                         </select><br><br>
 
                         <label for="date1">Preferred Date : </label>
@@ -71,7 +72,7 @@
 
             </div>
         </div>
-        <a href="#"><button class="btn">Top</button></a> 
+        <button class="btn" onclick="location.href='#'">Top</button>
     </main>
     <footer>
         <div class="footer">
@@ -79,14 +80,14 @@
             <div class="contact-section">
                 <span>Contact Us</span>
                 Address: 114 Norris Canal Rd, Colombo 01000<br>
-                Phone: <a href="tel:+94 11 2140 000">+94 11 2140 000</a><br>
+                Phone: <a href="tel:+94112140000">+94 11 2140 000</a><br>
                 Email: <a href="mailto:wellspringhealthcare@gmail.com">wellspringhealthcare@gmail.com</a>
             </div>
             <div class="branches-section">
                 <span>Our Branches</span>
-                Colombo: <a href="tel:+94 11 2140 000">+94 11 2140 000</a><br>
-                Kandy: <a href="tel:+94 81 452 8800">+94 81 452 8800</a><br>
-                Galle: <a href="tel:+94 91 464 0640">+94 91 464 0640</a><br>
+                Colombo: <a href="tel:+94112140000">+94 11 2140 000</a><br>
+                Kandy: <a href="tel:+94814528800">+94 81 452 8800</a><br>
+                Galle: <a href="tel:+94914640640">+94 91 464 0640</a><br>
             </div>
         </div>
         <p>&copy; 2024 Wellspring Hospital. All rights reserved.</p>

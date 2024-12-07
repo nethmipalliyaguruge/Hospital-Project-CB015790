@@ -85,6 +85,7 @@ header {
 
 .emergency-call{
     background-color: white;
+    font-size: 20px;
 }
 
 .navigation {
@@ -187,7 +188,6 @@ header {
     font-size: 16px;
     color: #333; */
     position: sticky;
-    font-size: 16px;
     color: #02747b;
     margin-right: 20px;
 }
@@ -344,6 +344,17 @@ h2{
     
 }
 
+.home img{
+    width: 400px;
+    height: auto;
+    border-radius: 5px;
+}
+
+#home_pic2{
+    width: 600px;
+    height: auto;
+}
+
 #home-about{
     box-shadow:var(--box-shadow);
     margin-top: 50px;
@@ -477,6 +488,11 @@ h2{
 
 .brunch:hover{
     transform: scale(1.05);
+}
+
+.brunch img{
+    width:600px; 
+    height:350px;
 }
 
 
@@ -623,6 +639,8 @@ table tbody td a{
 .container-box img {
     max-width: 100%; /* Make the image responsive */
     margin-bottom: 15px; 
+    width: 300px;
+    height: 300px;
 }
 
 .container-box h3 {
@@ -693,6 +711,12 @@ table tbody td a{
 
 .box-flex:hover{
     transform: scale(1.05);
+}
+
+.box-flex img{
+    width: 400px;
+    height: 250px;
+    border-radius: 5px;
 }
 
 .service-name{
