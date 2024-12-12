@@ -1,0 +1,212 @@
+[
+    {
+       "id":1,
+        "name":"Paracetamol (500 mg)",
+        "price": 1,
+        "desc": "per tablet",
+        "img":"./Images/Pharmacy/Paracetamol.jpg"
+    },
+    {
+        "id":2,
+        "name":"Ibuprofen (200 mg)",
+        "price": 5,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":3,
+        "name":"Diclofenac Sodium (50 mg)",
+        "price": 3,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":4,
+        "name":"Tramadol (50 mg)",
+        "price": 10,
+        "desc": "per tablet",
+        "img":"."
+    },
+    {
+        "id":5,
+        "name":"Naproxen (250 mg)",
+        "price": 15,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":6,
+        "name":"Ketoprofen (50 mg)",
+        "price": 20,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":7,
+        "name":"Amoxicillin (500 mg)",
+        "price": 5,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":8,
+        "name":"Cefuroxime (250 mg)",
+        "price": 50,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":9,
+        "name":"Doxycycline (100 mg) ",
+        "price": 4,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":10,
+        "name":"Metronidazole (400 mg)",
+        "price": 1,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":11,
+        "name":"Ciprofloxacin (500 mg)",
+        "price": 4,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":12,
+        "name":"Azithromycin (500 mg)",
+        "price": 70,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":13,
+        "name":"Mirtazapine (15 mg)",
+        "price": 50,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":14,
+        "name":"Fluoxetine (20 mg)",
+        "price": 15,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":15,
+        "name":"Sertraline (50 mg)",
+        "price": 25,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":16,
+        "name":"Amitriptyline (25 mg)",
+        "price": 2,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":17,
+        "name":"Escitalopram (10 mg)",
+        "price": 45,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":18,
+        "name":"Duloxetine (30 mg)",
+        "price": 65,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":19,
+        "name":"Cetirizine (10 mg)",
+        "price": 5,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":20,
+        "name":"Loratadine (10 mg)",
+        "price": 6,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":21,
+        "name":"Fexofenadine (120 mg)",
+        "price": 20,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":22,
+        "name":"Chlorpheniramine (4 mg)",
+        "price": 2,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":23,
+        "name":"Hydroxyzine (25 mg)",
+        "price": 4,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":24,
+        "name":"Diphenhydramine (25 mg)",
+        "price": 7,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":25,
+        "name":"Amlodipine (5 mg)",
+        "price": 2,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":26,
+        "name":"Losartan (50 mg)",
+        "price": 5,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":27,
+        "name":"Enalapril (5 mg)",
+        "price": 6,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":28,
+        "name":"Atenolol (50 mg)",
+        "price": 4,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":29,
+        "name":"Hydrochlorothiazide (25 mg)",
+        "price": 1,
+        "desc": "per tablet",
+        "img":""
+    },
+    {
+        "id":30,
+        "name":"Metoprolol (50 mg)",
+        "price": 7,
+        "desc": "per tablet",
+        "img":""
+    }
+]

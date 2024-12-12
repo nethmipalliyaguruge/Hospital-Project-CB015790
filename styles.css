@@ -961,19 +961,7 @@ legend{
     }
 }
 
-/* Ph1 */
 
-/* .pharmacy-flex{
-    display: flex;
-    flex-direction: row;
-    column-gap: 35px;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 10px;
-    box-shadow: var(--box-shadow);
-    margin: 10px;
-    padding: 10px;    
-} */
 
 #ph-main {
     padding: 30px;
@@ -990,7 +978,7 @@ legend{
     color: #007BFF;
 }
 
-#ph-h2 {
+.ph-h2 {
     margin-top: 30px;
     color: #333;
     font-size: 1.5rem;
@@ -999,7 +987,7 @@ legend{
     padding-bottom: 5px;
 }
 
-.pharmacy-flex {
+/* .medicine-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -1034,7 +1022,7 @@ legend{
     font-size: 1.2rem;
     color: #333;
     margin-bottom: 10px;
-}
+} */
 
 button {
     margin: 5px;
@@ -1060,6 +1048,47 @@ button:hover {
 button:hover a {
     color: #ffffff;
 }
+
+.medicine-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.medicine-card {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+}
+.medicine-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.medicine-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    margin: 5px 0;
+}
+
 
 
 
