@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Order Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .medicine-section {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .button-group {
+            margin-top: 20px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pharmacy Order Page</h1>
+
+    <div id="medicine-sections">
+        <div class="medicine-section" id="analgesics">
+            <h2>Analgesics</h2>
+            <label>Paracetamol (Price: $5) <input type="number" min="0" id="paracetamol" placeholder="Qty"></label><br>
+            <label>Ibuprofen (Price: $8) <input type="number" min="0" id="ibuprofen" placeholder="Qty"></label><br>
+        </div>
+
+        <div class="medicine-section" id="antibiotics">
+            <h2>Antibiotics</h2>
+            <label>Amoxicillin (Price: $12) <input type="number" min="0" id="amoxicillin" placeholder="Qty"></label><br>
+            <label>Ciprofloxacin (Price: $15) <input type="number" min="0" id="ciprofloxacin" placeholder="Qty"></label><br>
+        </div>
+    </div>
+
+    <div class="button-group">
+        <button onclick="addToTable()">Add to Cart</button>
+        <button onclick="saveFavourites()">Add to Favourites</button>
+        <button onclick="applyFavourites()">Apply Favourites</button>
+    </div>
+
+    <table id="cart">
+        <thead>
+            <tr>
+                <th>Medicine</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Grand Total</td>
+                <td id="grand-total">$0</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <button onclick="proceedToCheckout()">Buy Now</button>
+
+    <script>
+        //reset the cart button
+        //reset the favourites button
+        //even the cart is empty, it's adding items to favourites without and error
+        //if the cart is empty, it should not proceed to checkout
+        //if the cart is empty, it should not add to favourites
+        //if the cart is empty, it should not add to cart
+        //remove iteams from the cart
+        const prices = {
+            paracetamol: 5,
+            ibuprofen: 8,
+            amoxicillin: 12,
+            ciprofloxacin: 15,
+        };
+
+        const cart = [];
+
+        function addToTable() {
+            const tableBody = document.querySelector('#cart tbody');
+            tableBody.innerHTML = '';
+            cart.length = 0;
+
+            for (const medicine in prices) {
+                const qty = document.getElementById(medicine).value;
+                if (qty > 0) {
+                    const price = prices[medicine];
+                    const total = qty * price;
+                    cart.push({ medicine, qty, price, total });
+                }
+            }
+
+            let grandTotal = 0;
+
+            cart.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `<td>${item.medicine}</td><td>${item.qty}</td><td>$${item.price}</td><td>$${item.total}</td>`;
+                tableBody.appendChild(row);
+                grandTotal += item.total;
+            });
+
+            document.getElementById('grand-total').textContent = `$${grandTotal}`;
+        }
+
+        function saveFavourites() {
+            localStorage.setItem('favourites', JSON.stringify(cart));
+            alert('Order saved as favourites.');
+        }
+
+        function applyFavourites() {
+            const favourites = JSON.parse(localStorage.getItem('favourites')) || [];
+            favourites.forEach(item => {
+                document.getElementById(item.medicine).value = item.qty;
+            });
+            addToTable();
+            alert('Favourites applied.');
+        }
+
+        function proceedToCheckout() {
+            if (cart.length === 0) {
+                alert('Cart is empty! Please add items.');
+                return;
+            }
+            const orderSummary = cart.map(item => `${item.qty} x ${item.medicine}`).join(', ');
+            const grandTotal = document.getElementById('grand-total').textContent;
+
+            const deliveryDate = new Date();
+            deliveryDate.setDate(deliveryDate.getDate() + 3);
+
+            alert(`Thank you for your purchase! Your order: ${orderSummary}. Total: ${grandTotal}. Delivery Date: ${deliveryDate.toDateString()}`);
+        }
+    </script>
+</body>
+</html>
