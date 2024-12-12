@@ -4,209 +4,209 @@
         "name":"Paracetamol (500 mg)",
         "price": 1,
         "desc": "per tablet",
-        "img":"./Images/Pharmacy/Paracetamol.jpg"
+        "img":"./Images/Paracetamol.webp"
     },
     {
         "id":2,
         "name":"Ibuprofen (200 mg)",
         "price": 5,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/Ibuprofen.webp"
     },
     {
         "id":3,
         "name":"Diclofenac Sodium (50 mg)",
         "price": 3,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/Diclofenac Sodium.webp"
     },
     {
         "id":4,
         "name":"Tramadol (50 mg)",
         "price": 10,
         "desc": "per tablet",
-        "img":"."
+        "img":"./Images/Tramadol.webp"
     },
     {
         "id":5,
         "name":"Naproxen (250 mg)",
         "price": 15,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/Naproxen.webp"
     },
     {
         "id":6,
         "name":"Ketoprofen (50 mg)",
         "price": 20,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/Ketoprofen.webp"
     },
     {
         "id":7,
-        "name":"Amoxicillin (500 mg)",
+        "name":"Amoxycillin (500 mg)",
         "price": 5,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/Amoxycillin.webp"
     },
     {
         "id":8,
         "name":"Cefuroxime (250 mg)",
         "price": 50,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/Cefuroxime.webp"
     },
     {
         "id":9,
         "name":"Doxycycline (100 mg) ",
         "price": 4,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/Doxycycline.webp"
     },
     {
         "id":10,
         "name":"Metronidazole (400 mg)",
         "price": 1,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/Metronidazole.webp"
     },
     {
         "id":11,
         "name":"Ciprofloxacin (500 mg)",
         "price": 4,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/Ciprofloxacin.webp"
     },
     {
         "id":12,
         "name":"Azithromycin (500 mg)",
         "price": 70,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/Azithromycin.webp"
     },
     {
         "id":13,
         "name":"Mirtazapine (15 mg)",
         "price": 50,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/mirtazapine.webp"
     },
     {
         "id":14,
         "name":"Fluoxetine (20 mg)",
         "price": 15,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/fluoxetine.webp"
     },
     {
         "id":15,
         "name":"Sertraline (50 mg)",
         "price": 25,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/sertraline.webp"
     },
     {
         "id":16,
         "name":"Amitriptyline (25 mg)",
         "price": 2,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/amitriptyline.webp"
     },
     {
         "id":17,
         "name":"Escitalopram (10 mg)",
         "price": 45,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/Escitalopram.webp"
     },
     {
         "id":18,
         "name":"Duloxetine (30 mg)",
         "price": 65,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/duloxetine.webp"
     },
     {
         "id":19,
         "name":"Cetirizine (10 mg)",
         "price": 5,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/Cetirizine.webp"
     },
     {
         "id":20,
         "name":"Loratadine (10 mg)",
         "price": 6,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/Loratadine.webp"
     },
     {
         "id":21,
         "name":"Fexofenadine (120 mg)",
         "price": 20,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/Fexofenadine.webp"
     },
     {
         "id":22,
         "name":"Chlorpheniramine (4 mg)",
         "price": 2,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/Chlorpheniramine.webp"
     },
     {
         "id":23,
         "name":"Hydroxyzine (25 mg)",
         "price": 4,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/Hydroxyzine.webp"
     },
     {
         "id":24,
         "name":"Diphenhydramine (25 mg)",
         "price": 7,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/Diphenhydramine.webp"
     },
     {
         "id":25,
         "name":"Amlodipine (5 mg)",
         "price": 2,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/Amlodipine.webp"
     },
     {
         "id":26,
         "name":"Losartan (50 mg)",
         "price": 5,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/Losartan.webp"
     },
     {
         "id":27,
         "name":"Enalapril (5 mg)",
         "price": 6,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/Enalapril.webp"
     },
     {
         "id":28,
         "name":"Atenolol (50 mg)",
         "price": 4,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/Atenolol.webp"
     },
     {
         "id":29,
         "name":"Hydrochlorothiazide (25 mg)",
         "price": 1,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/Hydrochlorothiazide.webp"
     },
     {
         "id":30,
         "name":"Metoprolol (50 mg)",
         "price": 7,
         "desc": "per tablet",
-        "img":""
+        "img":"./Images/Metoprolol.webp"
     }
 ]
