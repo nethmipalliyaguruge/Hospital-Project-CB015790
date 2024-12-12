@@ -980,83 +980,34 @@ legend{
 
 .ph-h2 {
     margin-top: 30px;
+    margin-bottom: 10px;
     color: #333;
     font-size: 1.5rem;
     border-bottom: 2px solid #007BFF;
     display: inline-block;
     padding-bottom: 5px;
-}
-
-/* .medicine-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.pharmacy-box {
-    background: #f8f9fa;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 300px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s;
-}
-
-.pharmacy-box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.pharmacy-img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.drug-name h3 {
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 10px;
-} */
-
-button {
-    margin: 5px;
-    padding: 10px 15px;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-}
-
-button a {
-    color: #fff;
-    text-decoration: none;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-button:hover a {
-    color: #ffffff;
+    /* line-height: 1.2; */
 }
 
 .medicine-container {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
     margin-top: 20px;
 }
+.category-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
 .medicine-card {
+    display: flex;
+    flex-direction: column;
     background: #f8f9fa;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -1088,7 +1039,30 @@ input[type="number"] {
     padding: 5px;
     margin: 5px 0;
 }
+button {
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
 
+button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:hover a {
+    color: #ffffff;
+}
 
 
 
