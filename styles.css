@@ -10,13 +10,6 @@ body{
     margin: 0;
     padding: 0;
 }
-
-body main{
-    margin: 10px;
-    padding: 0;
-}
-
-
     
 
 /* Header Styling */
@@ -64,7 +57,7 @@ header {
     position: relative;
 }
 
-.cart-icon span{
+#cart-count{
     display: flex;
     position: absolute;
     top: 50%;
@@ -79,9 +72,17 @@ header {
 
 }
 
-.emergency-call{
-    background-color: white;
+.emergency-call {
     font-size: 20px;
+    position: sticky;
+    color: #02747b;
+}
+
+.emergency-call a {
+    position: sticky;
+    color: #ff0000;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .navigation {
@@ -185,19 +186,6 @@ header {
 
 
 /* common */
-.emergency-call {
-    position: sticky;
-    color: #02747b;
-    margin-right: 20px;
-}
-
-.emergency-call a {
-    position: sticky;
-    color: #ff0000;
-    text-decoration: none;
-    font-weight: bold;
-}
-
 video{
     display: flex;
     justify-content: center;
@@ -219,6 +207,12 @@ h1{
 h2{
     text-indent: 5%;
     color: var(--text-color);
+}
+
+p{
+    text-align: justify;
+    margin: 20px;
+    line-height: 1.6;
 }
 
 .btn_top {

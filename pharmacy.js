@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('order-summary-body')) {
         populateOrderSummary();
     }
+
+    updateCartCount(); // Initialize cart count on page load
 });
 
 function renderMedicines(medicines) {
@@ -69,6 +71,7 @@ function setupCartFunctionality(medicines) {
     const cartButtons = document.querySelectorAll(".add-to-cart");
     const tableBody = document.querySelector("table.table-content tbody");
     const grandTotalElement = document.getElementById("grand-total");
+    const cartCountElement = document.getElementById("cart-count");
 
     function addItem(event) {
         event.preventDefault();
@@ -107,6 +110,7 @@ function setupCartFunctionality(medicines) {
         }
 
         updateGrandTotal();
+        updateCartCount();
         alert(`${name} has been added to your cart`);
 
         // Save cart items to local storage
@@ -122,10 +126,18 @@ function setupCartFunctionality(medicines) {
         grandTotalElement.textContent = `Rs.${grandTotal}/=`;
     }
 
+    function updateCartCount() {
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        const itemCount = cartItems.reduce((count, item) => count + item.quantity, 0);
+        cartCountElement.textContent = itemCount;
+        console.log(`Cart count updated: ${itemCount}`); // Log the updated cart count
+    }
+
     function removeItem(event) {
         const row = event.target.closest("tr");
         row.remove();
         updateGrandTotal();
+        updateCartCount();
         alert("Item has been removed from your cart");
 
         // Update local storage
@@ -135,6 +147,7 @@ function setupCartFunctionality(medicines) {
     function resetCart() {
         tableBody.innerHTML = "";
         updateGrandTotal();
+        updateCartCount();
         alert("Cart has been reset!");
         localStorage.removeItem('cartItems');
         populateOrderSummary(); // Clear the order summary as well
@@ -177,6 +190,7 @@ function setupCartFunctionality(medicines) {
             tableBody.appendChild(row);
         });
         updateGrandTotal();
+        updateCartCount();
         alert("Favourites have been applied!");
 
         // Save favourites to local storage as cart items
@@ -196,6 +210,7 @@ function setupCartFunctionality(medicines) {
             price: parseFloat(row.cells[2].textContent.replace('Rs.', '').replace('/=', ''))
         }));
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        updateCartCount(); // Ensure cart count is updated after saving
     }
 
     function updateQuantity(event) {
@@ -206,6 +221,7 @@ function setupCartFunctionality(medicines) {
         const total = price * quantity;
         row.cells[3].textContent = `Rs.${total}/=`;
         updateGrandTotal();
+        updateCartCount();
         saveCartItems();
     }
 
