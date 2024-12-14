@@ -56,11 +56,11 @@
         "img":"./Images/Cefuroxime.webp"
     },
     {
-        "id":9,
-        "name":"Doxycycline (100 mg) ",
+        "id": 9,
+        "name": "Doxycycline (100 mg)",
         "price": 4,
         "desc": "per tablet",
-        "img":"./Images/Doxycycline.webp"
+        "img": "./Images/Doxycycline.webp"
     },
     {
         "id":10,

@@ -18,6 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const payButton = document.getElementById('pay');
         payButton.addEventListener('click', handlePayment);
     }
+
+    if (document.getElementById('order-summary-body')) {
+        populateOrderSummary();
+    }
 });
 
 function renderMedicines(medicines) {
@@ -71,8 +75,17 @@ function setupCartFunctionality(medicines) {
 
         const medicineCard = event.target.closest(".medicine-card");
         const name = medicineCard.querySelector("h3").textContent.trim();
+        console.log(`Adding item: ${name}`); // Log the name of the medicine being added
         const quantity = parseInt(medicineCard.querySelector(".quantity").value);
-        const price = parseFloat(medicines.find(med => med.name === name).price);
+        const medicine = medicines.find(med => med.name === name);
+
+        if (!medicine) {
+            console.error(`Medicine not found: ${name}`);
+            alert(`Medicine not found: ${name}`);
+            return;
+        }
+
+        const price = parseFloat(medicine.price);
         const total = price * quantity;
 
         const existingRow = [...tableBody.rows].find(row => row.cells[0].textContent === name);
@@ -119,16 +132,32 @@ function setupCartFunctionality(medicines) {
         row.remove();
         updateGrandTotal();
         alert("Item has been removed from your cart");
+
+        // Update local storage
+        const cartItems = [...tableBody.rows].map(row => ({
+            name: row.cells[0].textContent,
+            quantity: parseInt(row.cells[1].textContent),
+            price: parseFloat(row.cells[2].textContent.replace('Rs.', '').replace('/=', ''))
+        }));
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
     }
 
     function resetCart() {
         tableBody.innerHTML = "";
         updateGrandTotal();
         alert("Cart has been reset!");
+        localStorage.removeItem('cartItems');
+        populateOrderSummary(); // Clear the order summary as well
     }
 
     function addToFavourites() {
-        const favourites = [...tableBody.rows].map(row => ({
+        const cartItems = [...tableBody.rows];
+        if (cartItems.length === 0) {
+            alert("Your cart is empty. Cannot add to favourites.");
+            return;
+        }
+
+        const favourites = cartItems.map(row => ({
             name: row.cells[0].textContent,
             quantity: parseInt(row.cells[1].textContent),
             price: parseFloat(row.cells[2].textContent.replace('Rs.', '').replace('/=', ''))
@@ -139,6 +168,11 @@ function setupCartFunctionality(medicines) {
 
     function applyFavourites() {
         const favourites = JSON.parse(localStorage.getItem('favourites')) || [];
+        if (favourites.length === 0) {
+            alert("No favourites found.");
+            return;
+        }
+
         tableBody.innerHTML = "";
         favourites.forEach(fav => {
             const row = document.createElement("tr");
@@ -154,6 +188,10 @@ function setupCartFunctionality(medicines) {
         });
         updateGrandTotal();
         alert("Favourites have been applied!");
+
+        // Save favourites to local storage as cart items
+        localStorage.setItem('cartItems', JSON.stringify(favourites));
+        populateOrderSummary(); // Update the order summary
     }
 
     function resetFavourites() {
@@ -217,4 +255,33 @@ function handlePayment(event) {
     
     // Clear the cart after purchase
     localStorage.removeItem('cartItems');
+    populateOrderSummary(); // Clear the order summary as well
+
+    // Clear the billing form
+    document.querySelector('.registration-form form').reset();
+}
+
+function populateOrderSummary() {
+    const orderSummaryBody = document.getElementById('order-summary-body');
+    const orderGrandTotal = document.getElementById('order-grand-total');
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+    orderSummaryBody.innerHTML = ""; // Clear the order summary body
+
+    let grandTotal = 0;
+    cartItems.forEach(item => {
+        const total = item.price * item.quantity;
+        grandTotal += total;
+
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${item.name}</td>
+            <td>${item.quantity}</td>
+            <td>Rs.${item.price}/=</td>
+            <td>Rs.${total}/=</td>
+        `;
+        orderSummaryBody.appendChild(row);
+    });
+
+    orderGrandTotal.textContent = `Rs.${grandTotal}/=`;
 }
