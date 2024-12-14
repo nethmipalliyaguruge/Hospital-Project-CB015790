@@ -128,9 +128,9 @@ function setupCartFunctionality(medicines) {
 
     function updateCartCount() {
         const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-        const itemCount = cartItems.reduce((count, item) => count + item.quantity, 0);
-        cartCountElement.textContent = itemCount;
-        console.log(`Cart count updated: ${itemCount}`); // Log the updated cart count
+        const distinctItemCount = cartItems.length;
+        cartCountElement.textContent = distinctItemCount;
+        console.log(`Cart count updated: ${distinctItemCount}`); // Log the updated cart count
     }
 
     function removeItem(event) {
