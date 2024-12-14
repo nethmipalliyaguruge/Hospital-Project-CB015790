@@ -22,11 +22,13 @@
         </a>
         <div class="header-content">
             <div class="icons">
-                <div class="emergency-call">Emergency call <a href="tel:1313"><i class="fa-solid fa-phone"></i>1313</a></div>
+                <div class="emergency-call">Emergency call <a href="tel:1313"><i class="fa-solid fa-phone" aria-label="Phone"></i>1313</a></div>
                 <div class="cart-icon">
-                <a href="./pharmacy.html#cart-section"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
-                </svg></a>
+                    <a href="./pharmacy.html#cart-section" aria-label="Go to cart">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"></path>
+                        </svg>
+                      </a>                      
                 <span id="cart-count">0</span></div>
             </div>
             <nav class="navigation">
@@ -48,7 +50,7 @@
             <div class="container-box">
                 <img src="Images/Dr.Alex.webp" alt="Picture of the Dr.Alex Middleton">
                 <div>
-                    <h3>Dr.Alex Middleton</h3>
+                    <h2 class="smaller-heading">Dr. Alex Middleton</h2>
                     <p><b>Specialization:</b> Cardiology<br>
                         <b>Phone Number:</b> <a href="tel:+94712345678">+94 71 234 5678</a><br>
                         <b>About:</b> Dr.Alex Middleton is a renowned cardiologist with over 15 years of experience in treating heart conditions. Dr. Middleton is known for his expertise in managing complex cardiac cases and providing personalized care to his patients.</p>
@@ -58,7 +60,7 @@
             <div class="container-box">
                 <img src="Images/Dr.Taylor.webp" alt="Picture of the Dr.Taylor Windsor">
                 <div>
-                    <h3>Dr.Taylor Windsor</h3>
+                    <h2 class="smaller-heading">Dr.Taylor Windsor</h2>
                     <p><b>Specialization:</b> Neurology<br>
                         <b>Phone Number:</b><a href="tel:+94745678901">+94 74 567 8901</a><br>
                         <b>About:</b> Dr.Taylor Windsor is an experienced neurologist who specializes in treating neurological disorders such as epilepsy, migraines, and Parkinson’s disease. Dr. Windsor is committed to staying at the forefront of neurological research and offering advanced treatments to patients.
@@ -69,7 +71,7 @@
             <div class="container-box">
                 <img src="Images/Dr.Jordan.webp" alt="Picture of the Dr.Jordan Rivers">
                 <div>
-                    <h3>Dr.Jordan Rivers</h3>
+                    <h2 class="smaller-heading">Dr.Jordan Rivers</h2>
                     <p><b>Specialization:</b> Orthopedics<br>
                         <b>Phone Number:</b><a href="tel:+94723456789">+94 72 345 6789</a><br>
                         <b>About:</b> Dr.Jordan Rivers is a leading orthopedic surgeon specializing in joint replacements and sports injuries. With a passion for helping patients regain mobility, Dr. Rivers has successfully performed numerous surgeries and is dedicated to improving patient outcomes.
@@ -79,7 +81,8 @@
                    
             <div class="container-box">
                 <img src="Images/Dr.Casey.webp" alt="Picture of the Dr.Casey Montgomery">
-                <div><h3>Dr.Casey Montgomery</h3>
+                <div>
+                    <h2 class="smaller-heading">Dr.Casey Montgomery</h2>
                     <p><b>Specialization:</b> Pediatrics<br>
                         <b>Phone Number:</b><a href="tel:+94734567890">+94 73 456 7890</a><br>
                         <b>About:</b> Dr.Casey Montgomery is a compassionate pediatrician with a focus on child health and development. Dr. Montgomery has a reputation for being attentive and caring, ensuring that young patients receive the best possible care from infancy through adolescence.
@@ -87,7 +90,10 @@
                 </div>
             </div>
         </div>
-        <button class="btn_top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"><i class="fa-solid fa-caret-up"></i></button>
+        <button class="btn_top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" style="display: block;">
+            <span class="sr-only">Scroll to top</span>
+            <i class="fa-solid fa-caret-up" aria-hidden="true"></i>
+          </button>
         <script src="./scrollup.js" defer></script>
     </main>
     <footer>

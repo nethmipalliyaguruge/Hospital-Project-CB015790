@@ -234,6 +234,19 @@ p{
     background-color: #3f3f3f;
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  
+
 
 @media only screen and (max-width: 768px) {
 
@@ -610,6 +623,13 @@ table tbody td a{
 
 
 /* Doctors */
+
+.smaller-heading {
+    font-size: 1.2em;
+    text-indent: 5%;
+    color: var(--text-color);
+}
+
 .container-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid with flexible columns */
@@ -655,6 +675,9 @@ table tbody td a{
 /* Media query for screens smaller than 768px */
 @media only screen and (max-width: 768px) {
 
+    .smaller-heading{
+        font-size: 1.5rem; 
+    }
     .container-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Reduce min column width for small screens */
         gap: 15px;
