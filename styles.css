@@ -201,7 +201,7 @@ video{
 }
 
 h1{
-    color: #0F3333;
+    color: #007C85;
 }
 
 h2{
@@ -547,6 +547,10 @@ table tbody td a{
 
 .table-content tfoot td{
     text-align: center;
+}
+
+.table-content caption {
+    visibility: hidden;
 }
 
 /* Media query for screens smaller than 768px */
@@ -1080,6 +1084,10 @@ button:hover {
 
 button:hover a {
     color: #ffffff;
+}
+
+#hide{
+    display: none;
 }
 
 #reset2{
