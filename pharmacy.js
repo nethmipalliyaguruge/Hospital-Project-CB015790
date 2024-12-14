@@ -90,15 +90,15 @@ function setupCartFunctionality(medicines) {
 
         const existingRow = [...tableBody.rows].find(row => row.cells[0].textContent === name);
         if (existingRow) {
-            const currentQuantity = parseInt(existingRow.cells[1].textContent);
+            const currentQuantity = parseInt(existingRow.cells[1].querySelector('input').value);
             const newQuantity = currentQuantity + quantity;
-            existingRow.cells[1].textContent = newQuantity;
+            existingRow.cells[1].querySelector('input').value = newQuantity;
             existingRow.cells[3].textContent = `Rs.${price * newQuantity}/=`;
         } else {
             const row = document.createElement("tr");
             row.innerHTML = `
                 <td>${name}</td>
-                <td>${quantity}</td>
+                <td><input type="number" min="1" value="${quantity}" class="cart-quantity"></td>
                 <td>Rs.${price}/=</td>
                 <td>Rs.${total}/=</td>
                 <td><button class="remove-from-cart">Remove</button></td>
@@ -110,12 +110,7 @@ function setupCartFunctionality(medicines) {
         alert(`${name} has been added to your cart`);
 
         // Save cart items to local storage
-        const cartItems = [...tableBody.rows].map(row => ({
-            name: row.cells[0].textContent,
-            quantity: parseInt(row.cells[1].textContent),
-            price: parseFloat(row.cells[2].textContent.replace('Rs.', '').replace('/=', ''))
-        }));
-        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        saveCartItems();
     }
 
     function updateGrandTotal() {
@@ -134,12 +129,7 @@ function setupCartFunctionality(medicines) {
         alert("Item has been removed from your cart");
 
         // Update local storage
-        const cartItems = [...tableBody.rows].map(row => ({
-            name: row.cells[0].textContent,
-            quantity: parseInt(row.cells[1].textContent),
-            price: parseFloat(row.cells[2].textContent.replace('Rs.', '').replace('/=', ''))
-        }));
-        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        saveCartItems();
     }
 
     function resetCart() {
@@ -159,7 +149,7 @@ function setupCartFunctionality(medicines) {
 
         const favourites = cartItems.map(row => ({
             name: row.cells[0].textContent,
-            quantity: parseInt(row.cells[1].textContent),
+            quantity: parseInt(row.cells[1].querySelector('input').value),
             price: parseFloat(row.cells[2].textContent.replace('Rs.', '').replace('/=', ''))
         }));
         localStorage.setItem('favourites', JSON.stringify(favourites));
@@ -179,7 +169,7 @@ function setupCartFunctionality(medicines) {
             const total = fav.price * fav.quantity;
             row.innerHTML = `
                 <td>${fav.name}</td>
-                <td>${fav.quantity}</td>
+                <td><input type="number" min="1" value="${fav.quantity}" class="cart-quantity"></td>
                 <td>Rs.${fav.price}/=</td>
                 <td>Rs.${total}/=</td>
                 <td><button class="remove-from-cart">Remove</button></td>
@@ -190,13 +180,33 @@ function setupCartFunctionality(medicines) {
         alert("Favourites have been applied!");
 
         // Save favourites to local storage as cart items
-        localStorage.setItem('cartItems', JSON.stringify(favourites));
+        saveCartItems();
         populateOrderSummary(); // Update the order summary
     }
 
     function resetFavourites() {
         localStorage.removeItem('favourites');
         alert("Favourites have been reset!");
+    }
+
+    function saveCartItems() {
+        const cartItems = [...tableBody.rows].map(row => ({
+            name: row.cells[0].textContent,
+            quantity: parseInt(row.cells[1].querySelector('input').value),
+            price: parseFloat(row.cells[2].textContent.replace('Rs.', '').replace('/=', ''))
+        }));
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    }
+
+    function updateQuantity(event) {
+        const input = event.target;
+        const row = input.closest("tr");
+        const price = parseFloat(row.cells[2].textContent.replace('Rs.', '').replace('/=', ''));
+        const quantity = parseInt(input.value);
+        const total = price * quantity;
+        row.cells[3].textContent = `Rs.${total}/=`;
+        updateGrandTotal();
+        saveCartItems();
     }
 
     cartButtons.forEach(button => {
@@ -206,6 +216,12 @@ function setupCartFunctionality(medicines) {
     tableBody.addEventListener("click", event => {
         if (event.target.classList.contains("remove-from-cart")) {
             removeItem(event);
+        }
+    });
+
+    tableBody.addEventListener("input", event => {
+        if (event.target.classList.contains("cart-quantity")) {
+            updateQuantity(event);
         }
     });
 
